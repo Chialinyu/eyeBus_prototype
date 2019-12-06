@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>346415213295-h3pgnk3jplrmqetpckhd9ut1jo5nnbur.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.346415213295-h3pgnk3jplrmqetpckhd9ut1jo5nnbur</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDaSWRhSCQ_ujwJWVpeVOCk88ZVcftpQyI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>346415213295</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.carolynyu.BusPlusA</string>
+	<key>PROJECT_ID</key>
+	<string>bustestapp-c3c59</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bustestapp-c3c59.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:346415213295:ios:d08f6e613abb894757491a</string>
+	<key>DATABASE_URL</key>
+	<string>https://bustestapp-c3c59.firebaseio.com</string>
+</dict>
+</plist>
