@@ -31,7 +31,7 @@ class FavoriteListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "常用路線列表"
+        navigationItem.title = "常用路線"
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "編輯", style: .done, target: self, action: nil)
 
@@ -94,7 +94,7 @@ class FavoriteListTableViewController: UITableViewController {
             cell.transferStopLabel.text = "轉乘站：" + transferStation[indexPath.row]
             cell.transferStopLabel.accessibilityLabel = "。轉乘站。" + transferStation[indexPath.row]
         }else {
-            cell.transferStopLabel.text = "直達車 "
+            cell.transferStopLabel.text = "直達車"
             cell.transferStopLabel.accessibilityLabel = "。直達車。"
         }
         
@@ -109,6 +109,13 @@ class FavoriteListTableViewController: UITableViewController {
             routeView.selectIndex = indexPath.row
             routeView.sectionCount = self.nextViewSectionNum[indexPath.row]
 //            routeView.isFromSearch = 0
+            
+            navigationController?.pushViewController(routeView, animated: true)
+        } else {
+            let routeView = storyboard?.instantiateViewController(withIdentifier: "routeContentID2") as! Route2ViewController
+                        
+            routeView.selectIndex = indexPath.row
+            routeView.sectionCount = self.nextViewSectionNum[indexPath.row]
             
             navigationController?.pushViewController(routeView, animated: true)
         }

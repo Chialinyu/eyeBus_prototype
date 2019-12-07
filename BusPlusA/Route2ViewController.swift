@@ -1,32 +1,39 @@
 //
-//  RouteViewController.swift
+//  Route2ViewController.swift
 //  BusPlusA
 //
-//  Created by iui on 2019/12/4.
+//  Created by iui on 2019/12/7.
 //  Copyright © 2019 Carolyn Yu. All rights reserved.
 //
 
 import UIKit
 import FirebaseDatabase
 
-class RouteCell: UITableViewCell {
+class Route2Cell:UITableViewCell {
     @IBOutlet weak var busNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
 }
 
-class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Route3Cell:UITableViewCell {
+    @IBOutlet weak var busName2Label: UILabel!
+}
+
+class Route2ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var blueIconImg: UIImageView!
     @IBOutlet weak var startStopLabel: UILabel!
+    @IBOutlet weak var trabsferStopLabel: UILabel!
     @IBOutlet weak var endStopLabel: UILabel!
-    @IBOutlet weak var routeTableView: UITableView!
+    @IBOutlet weak var route2TableView: UITableView!
     
     var routeIndex = ["route1", "route2", "route3"]
     var selectIndex = 1
-    var sectionCount = 1 // = stop counts
-    var stops = ["南京敦化路口", "捷運中山站"]
+    var sectionCount = 3 // = stop counts
+    var stops = ["南京敦化路口", "捷運中山站", "圓環"]
     var buses = ["棕 9 南京幹線", "4 6", "2 8 2"]
     var times = ["10", "20", "20"]
+    var busesS2 = ["棕 9 南京幹線", "4 6", "2 8 2"]
+    var timesS2 = ["10", "20", "20"]
     var cellCount = [3, 3]
     var isUserArrive = false
     var nowSectionOfRoute = 0 // 紀錄現在在第幾度段旅程
@@ -34,10 +41,11 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "直達路線"
+        // Do any additional setup after loading the view.
+        self.title = "需轉乘路線"
         
-        routeTableView.delegate = self
-        routeTableView.dataSource = self
+        route2TableView.delegate = self
+        route2TableView.dataSource = self
         
         Database.database().reference().child("currentBusStop").setValue(0)
         
@@ -56,6 +64,8 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 DispatchQueue.main.async {
                     self.startStopLabel.text = "起點站  " + self.stops[0]
                     self.startStopLabel.accessibilityLabel = "起點站。" + self.stops[0]
+                    self.trabsferStopLabel.text = "轉乘站  " + self.stops[1]
+                    self.trabsferStopLabel.accessibilityLabel = "轉乘站。" + self.stops[1]
                     self.endStopLabel.text = "終點站  " + self.stops[self.sectionCount - 1]
                     self.endStopLabel.accessibilityLabel = "終點站。" + self.stops[self.sectionCount - 1]
                 }
@@ -71,6 +81,18 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             self.cellCount[0] = index
             
+            if(self.sectionCount > 2){
+                let busesSection2 = busesArray[1] as! [[String : AnyObject]]
+
+                index = 0
+                for (busPair) in busesSection2 {
+                    self.busesS2[index] = busPair["name"] as! String
+                    self.timesS2[index] = busPair["time"] as! String
+                    index += 1
+                }
+                self.cellCount[1] = index
+            }
+            
             let isUserArriveRef = Database.database().reference().child("isUserArrive")
             
             isUserArriveRef.observe(DataEventType.value, with: { (snapshot) in
@@ -78,13 +100,46 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.isUserArrive = retrievedDict ?? self.isUserArrive
             })
             
-            self.routeTableView.reloadData()
+            self.route2TableView.reloadData()
+        })
+        
+        
+        // add section
+        let ref2 = Database.database().reference().child("sectionOfRoute")
+
+        ref2.observe(DataEventType.value, with: { (snapshot) in
+            let sectionOfRoute = snapshot.value as! Bool
+                        
+            if self.sectionCount > 2 {
+                
+                Database.database().reference().child("currentBusStop").setValue(0)
+                
+                if sectionOfRoute == true {
+                    // change table section num
+                    self.nowSectionOfRoute = 1
+                    self.blueIconImg.image = UIImage(named: "route_blue_2")
+                } else {
+                    self.nowSectionOfRoute = 0
+                    self.blueIconImg.image = UIImage(named: "route_blue_1")
+                }
+                
+            } else {
+                Database.database().reference().child("sectionOfRoute").setValue(0)
+                self.nowSectionOfRoute = 0
+                Database.database().reference().child("currentBusStop").setValue(0)
+            }
+            
+            self.route2TableView.reloadData()
         })
         
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if nowSectionOfRoute == 0 {
+            return sectionCount - 1 // del last sec
+        } else {
+            return sectionCount - 2 // del last sec
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -99,9 +154,29 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
         label.frame = CGRect.init(x: 40, y: 20, width: 375-80, height: 48)
         label.numberOfLines = 0
         label.textColor = UIColor(rgb: 0xffffff)
-        
-        label.text = stops[0] + "\n往 " + stops[1]
-        label.accessibilityLabel = stops[0] + "。往。" + stops[1]
+
+        switch section {
+        case 0:
+            if nowSectionOfRoute == 0 {
+                label.text = stops[0] + "\n往 " + stops[1]
+                label.accessibilityLabel = stops[0] + "。往。" + stops[1]
+            } else {
+                label.text = stops[1] + "\n往 " + stops[2]
+                label.accessibilityLabel = stops[1] + "。往。" + stops[2]
+            }
+
+        case 1:
+            if nowSectionOfRoute == 0 {
+                label.text = stops[1] + "\n往 " + stops[2]
+                label.accessibilityLabel = stops[1] + "。往。" + stops[2]
+            } else {
+                label.text = ""
+                label.accessibilityLabel = ""
+            }
+
+        default:
+            break
+        }
         
         headerView.addSubview(label)
 
@@ -109,20 +184,50 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellCount[0]
+        
+        switch section {
+        case 0:
+            if nowSectionOfRoute == 0 {
+                return cellCount[0]
+            } else {
+                return cellCount[1]
+            }
+        case 1:
+            return cellCount[1]
+        default:
+            return cellCount[0]
+        }
+ 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        if indexPath.section == 0 {
+            return 120
+        } else {
+            return 67
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "routeCellID", for: indexPath) as! RouteCell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "routeCellID2", for: indexPath) as! Route2Cell
+            
+            if nowSectionOfRoute == 0 {
+                cell.busNameLabel.text = buses[indexPath.row]
+                cell.timeLabel.text = "還有 " + times[indexPath.row] + " 分鐘進站"
+            } else {
+                cell.busNameLabel.text = busesS2[indexPath.row]
+                cell.timeLabel.text = "還有 " + timesS2[indexPath.row] + " 分鐘進站"
+            }
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "routeCellID3", for: indexPath) as! Route3Cell
+
+            cell.busName2Label.text = busesS2[indexPath.row]
+
+            return cell
+        }
         
-        cell.busNameLabel.text = buses[indexPath.row]
-        cell.timeLabel.text = "還有 " + times[indexPath.row] + " 分鐘進站"
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -136,6 +241,10 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             var bookedBus = self.buses[indexPath.row]
             
+            if self.nowSectionOfRoute != 0 {
+                bookedBus = self.busesS2[indexPath.row]
+            }
+            
             let controller = UIAlertController(title: "是否要預約 " + bookedBus, message: nil, preferredStyle: .actionSheet)
             
             let action = UIAlertAction(title:"預約上車", style: .default) { (_) in
@@ -144,6 +253,10 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 bookedView.busSection = indexPath.section
                 bookedView.transferOrEndStop = self.stops[1]
+                if self.nowSectionOfRoute != 0 {
+                    bookedView.busSection = indexPath.section + 1
+                    bookedView.transferOrEndStop = self.stops[2]
+                }
                 
                 bookedView.busName = bookedBus
                 bookedView.busRow = indexPath.row
@@ -167,5 +280,14 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-}
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
