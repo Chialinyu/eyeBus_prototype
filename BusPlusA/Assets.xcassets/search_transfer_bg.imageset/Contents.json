@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "addFav.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "search_transfer_bg.png",
       "scale" : "2x"
     },
     {

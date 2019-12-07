@@ -168,6 +168,16 @@ class BookedRouteViewController: UIViewController {
                         Database.database().reference().child("isBook").setValue(0)
                         Database.database().reference().child("isBusArrive").setValue(0)
                         Database.database().reference().child("isBookGetOffBus").setValue(0)
+                        
+                        // if not turn on TakeOffAlert jump to next section bus list page
+                        Database.database().reference().child("isUserArrive").setValue(0)
+                        if self.sectionCount > 2 {
+                            if self.nowSectionOfRoute == 0 {
+                                Database.database().reference().child("sectionOfRoute").setValue(1)
+                            } else {
+                                Database.database().reference().child("sectionOfRoute").setValue(0)
+                            }
+                        }
                     }
                     alertController.addAction(cancelAction)
                     

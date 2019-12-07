@@ -23,7 +23,7 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var routeIndex = ["route1", "route2", "route3"]
     var selectIndex = 1
-    var sectionCount = 1 // = stop counts
+    var sectionCount = 2 // = stop counts
     var stops = ["南京敦化路口", "捷運中山站"]
     var buses = ["棕 9 南京幹線", "4 6", "2 8 2"]
     var times = ["10", "20", "20"]

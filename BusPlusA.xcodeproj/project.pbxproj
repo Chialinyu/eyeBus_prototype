@@ -13,6 +13,9 @@
 		AA0EDA14239AA326002E8E51 /* TakingBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0EDA13239AA326002E8E51 /* TakingBusViewController.swift */; };
 		AA8E99DF239A447D002C795C /* BookedRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8E99DE239A447D002C795C /* BookedRouteViewController.swift */; };
 		AAAAE6CC239AB6F7003EAA4F /* Route2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CB239AB6F7003EAA4F /* Route2ViewController.swift */; };
+		AAAAE6CE239BC145003EAA4F /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */; };
+		AAAAE6D0239C25B0003EAA4F /* FavRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */; };
+		AAAAE6D2239C3018003EAA4F /* FavRoute2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */; };
 		AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5423969CC700A46CD4 /* AppDelegate.swift */; };
 		AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */; };
 		AACE2C5C23969CC700A46CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACE2C5A23969CC700A46CD4 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		AA0EDA13239AA326002E8E51 /* TakingBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingBusViewController.swift; sourceTree = "<group>"; };
 		AA8E99DE239A447D002C795C /* BookedRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedRouteViewController.swift; sourceTree = "<group>"; };
 		AAAAE6CB239AB6F7003EAA4F /* Route2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route2ViewController.swift; sourceTree = "<group>"; };
+		AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
+		AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavRouteViewController.swift; sourceTree = "<group>"; };
+		AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavRoute2ViewController.swift; sourceTree = "<group>"; };
 		AACE2C5123969CC700A46CD4 /* BusPlusA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACE2C5423969CC700A46CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 				AAAAE6CB239AB6F7003EAA4F /* Route2ViewController.swift */,
 				AA8E99DE239A447D002C795C /* BookedRouteViewController.swift */,
 				AA0EDA13239AA326002E8E51 /* TakingBusViewController.swift */,
+				AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */,
+				AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */,
+				AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */,
 			);
 			path = BusPlusA;
 			sourceTree = "<group>";
@@ -435,7 +444,10 @@
 				AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */,
 				AACE2C902397961800A46CD4 /* RouteViewController.swift in Sources */,
 				AAAAE6CC239AB6F7003EAA4F /* Route2ViewController.swift in Sources */,
+				AAAAE6CE239BC145003EAA4F /* DirectionsViewController.swift in Sources */,
 				AACE2C8B2396CFB900A46CD4 /* FavoriteListTableViewController.swift in Sources */,
+				AAAAE6D0239C25B0003EAA4F /* FavRouteViewController.swift in Sources */,
+				AAAAE6D2239C3018003EAA4F /* FavRoute2ViewController.swift in Sources */,
 				AA8E99DF239A447D002C795C /* BookedRouteViewController.swift in Sources */,
 				AA0EDA14239AA326002E8E51 /* TakingBusViewController.swift in Sources */,
 			);
