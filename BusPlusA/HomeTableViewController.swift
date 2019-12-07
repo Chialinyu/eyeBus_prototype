@@ -13,7 +13,6 @@ class HomeTableViewCell: UITableViewCell{
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var functionLabel: UILabel!
     
-    
 }
 
 class HomeTableViewController: UITableViewController {
@@ -84,6 +83,10 @@ class HomeTableViewController: UITableViewController {
             
         case 1:
             let directionView = storyboard?.instantiateViewController(withIdentifier: "directionViewID") as! DirectionsViewController
+            navigationController?.pushViewController(directionView, animated: true)
+            
+        case 2:
+            let directionView = storyboard?.instantiateViewController(withIdentifier: "nearbyListID") as! StopsNearbyTableViewController
             navigationController?.pushViewController(directionView, animated: true)
             
         default:

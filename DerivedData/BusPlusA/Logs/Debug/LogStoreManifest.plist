@@ -108,6 +108,40 @@
 			<key>uniqueIdentifier</key>
 			<string>06F7E38A-DD67-4595-9EFC-183A4D6EB9FF</string>
 		</dict>
+		<key>0B56AA02-E600-42B5-8D6D-A6D92D944651</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0B56AA02-E600-42B5-8D6D-A6D92D944651.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>BusPlusA project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>BusPlusA</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug BusPlusA</string>
+			<key>timeStartedRecording</key>
+			<real>597443227.78723204</real>
+			<key>timeStoppedRecording</key>
+			<real>597443321.42521703</real>
+			<key>title</key>
+			<string>Debug BusPlusA</string>
+			<key>uniqueIdentifier</key>
+			<string>0B56AA02-E600-42B5-8D6D-A6D92D944651</string>
+		</dict>
 		<key>0DC31B95-B314-4532-8955-0497F01536EC</key>
 		<dict>
 			<key>className</key>
@@ -1026,6 +1060,40 @@
 			<key>uniqueIdentifier</key>
 			<string>59CC102E-E4D2-4CE7-B25D-27F33E0057E5</string>
 		</dict>
+		<key>5B10C996-F0E9-40BA-975E-A0BEF5B149E2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5B10C996-F0E9-40BA-975E-A0BEF5B149E2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>BusPlusA project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>BusPlusA</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug BusPlusA</string>
+			<key>timeStartedRecording</key>
+			<real>597446164.91310704</real>
+			<key>timeStoppedRecording</key>
+			<real>597446249.00235903</real>
+			<key>title</key>
+			<string>Debug BusPlusA</string>
+			<key>uniqueIdentifier</key>
+			<string>5B10C996-F0E9-40BA-975E-A0BEF5B149E2</string>
+		</dict>
 		<key>6716EA07-6AD9-4DBE-9C1A-68B28AF5802A</key>
 		<dict>
 			<key>className</key>
@@ -1366,6 +1434,40 @@
 			<key>uniqueIdentifier</key>
 			<string>8B3AA3F1-E7A3-46BA-BCBE-957EDF5D4674</string>
 		</dict>
+		<key>94813FFE-DBB0-4379-865B-35D6D17B9827</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>94813FFE-DBB0-4379-865B-35D6D17B9827.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>BusPlusA project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>BusPlusA</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug BusPlusA</string>
+			<key>timeStartedRecording</key>
+			<real>597443495.78113103</real>
+			<key>timeStoppedRecording</key>
+			<real>597443727.25894403</real>
+			<key>title</key>
+			<string>Debug BusPlusA</string>
+			<key>uniqueIdentifier</key>
+			<string>94813FFE-DBB0-4379-865B-35D6D17B9827</string>
+		</dict>
 		<key>974787BD-25ED-47ED-BB6A-F03CC9626A13</key>
 		<dict>
 			<key>className</key>
@@ -1399,6 +1501,40 @@
 			<string>Debug BusPlusA</string>
 			<key>uniqueIdentifier</key>
 			<string>974787BD-25ED-47ED-BB6A-F03CC9626A13</string>
+		</dict>
+		<key>9E1FDA11-7275-4844-B393-F029ADA3285C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9E1FDA11-7275-4844-B393-F029ADA3285C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>BusPlusA project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>BusPlusA</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug BusPlusA</string>
+			<key>timeStartedRecording</key>
+			<real>597443340.47554803</real>
+			<key>timeStoppedRecording</key>
+			<real>597443408.40643895</real>
+			<key>title</key>
+			<string>Debug BusPlusA</string>
+			<key>uniqueIdentifier</key>
+			<string>9E1FDA11-7275-4844-B393-F029ADA3285C</string>
 		</dict>
 		<key>9E83C43E-89F9-4567-BA4F-B9F28E36299D</key>
 		<dict>
@@ -1535,6 +1671,40 @@
 			<string>Debug BusPlusA</string>
 			<key>uniqueIdentifier</key>
 			<string>B1726068-AD08-470F-B0B8-4271E8DF2273</string>
+		</dict>
+		<key>B2569820-12EC-4188-99EE-39C927519ECE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B2569820-12EC-4188-99EE-39C927519ECE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>BusPlusA project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>BusPlusA</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug BusPlusA</string>
+			<key>timeStartedRecording</key>
+			<real>597446033.12727106</real>
+			<key>timeStoppedRecording</key>
+			<real>597446135.82843804</real>
+			<key>title</key>
+			<string>Debug BusPlusA</string>
+			<key>uniqueIdentifier</key>
+			<string>B2569820-12EC-4188-99EE-39C927519ECE</string>
 		</dict>
 		<key>B348FAEB-5AE6-413D-8C33-98F56F3D3AED</key>
 		<dict>

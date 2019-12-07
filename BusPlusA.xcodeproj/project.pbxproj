@@ -16,6 +16,7 @@
 		AAAAE6CE239BC145003EAA4F /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */; };
 		AAAAE6D0239C25B0003EAA4F /* FavRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */; };
 		AAAAE6D2239C3018003EAA4F /* FavRoute2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */; };
+		AAAAE6D6239C4975003EAA4F /* StopsNearbyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */; };
 		AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5423969CC700A46CD4 /* AppDelegate.swift */; };
 		AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */; };
 		AACE2C5C23969CC700A46CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACE2C5A23969CC700A46CD4 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavRouteViewController.swift; sourceTree = "<group>"; };
 		AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavRoute2ViewController.swift; sourceTree = "<group>"; };
+		AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsNearbyTableViewController.swift; sourceTree = "<group>"; };
 		AACE2C5123969CC700A46CD4 /* BusPlusA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACE2C5423969CC700A46CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */,
 				AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */,
 				AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */,
+				AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */,
 			);
 			path = BusPlusA;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				AACE2C92239A27E500A46CD4 /* AboutViewController.swift in Sources */,
 				AACE2C872396A4BD00A46CD4 /* HomeTableViewController.swift in Sources */,
 				AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */,
+				AAAAE6D6239C4975003EAA4F /* StopsNearbyTableViewController.swift in Sources */,
 				AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */,
 				AACE2C902397961800A46CD4 /* RouteViewController.swift in Sources */,
 				AAAAE6CC239AB6F7003EAA4F /* Route2ViewController.swift in Sources */,

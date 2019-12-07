@@ -40,6 +40,11 @@ class DirectionsViewController: UIViewController, UITextFieldDelegate, UITableVi
         resultTableView.delegate = self
         resultTableView.dataSource = self
         
+        urLocationTextField.attributedPlaceholder = NSAttributedString(string: "出發站牌",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        urForwardTextField.attributedPlaceholder = NSAttributedString(string: "到達站牌",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        
         searchBtn.addTarget(self, action: #selector(clickButton), for: .touchUpInside)
         
     }
