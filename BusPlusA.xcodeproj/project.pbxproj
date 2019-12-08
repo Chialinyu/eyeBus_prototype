@@ -19,6 +19,9 @@
 		AAAAE6D6239C4975003EAA4F /* StopsNearbyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */; };
 		AAAAE6D8239CC7B8003EAA4F /* StopsNearbyBusListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6D7239CC7B8003EAA4F /* StopsNearbyBusListTableViewController.swift */; };
 		AAAAE6DA239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6D9239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift */; };
+		AAAAE6DC239D084B003EAA4F /* SearchBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6DB239D084B003EAA4F /* SearchBusViewController.swift */; };
+		AAAAE6DE239D17FA003EAA4F /* SearchBusResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6DD239D17FA003EAA4F /* SearchBusResultTableViewController.swift */; };
+		AAAAE6E0239D37F0003EAA4F /* SearchBusStopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6DF239D37F0003EAA4F /* SearchBusStopListViewController.swift */; };
 		AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5423969CC700A46CD4 /* AppDelegate.swift */; };
 		AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */; };
 		AACE2C5C23969CC700A46CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACE2C5A23969CC700A46CD4 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsNearbyTableViewController.swift; sourceTree = "<group>"; };
 		AAAAE6D7239CC7B8003EAA4F /* StopsNearbyBusListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsNearbyBusListTableViewController.swift; sourceTree = "<group>"; };
 		AAAAE6D9239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedRouteNoDestinationViewController.swift; sourceTree = "<group>"; };
+		AAAAE6DB239D084B003EAA4F /* SearchBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBusViewController.swift; sourceTree = "<group>"; };
+		AAAAE6DD239D17FA003EAA4F /* SearchBusResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBusResultTableViewController.swift; sourceTree = "<group>"; };
+		AAAAE6DF239D37F0003EAA4F /* SearchBusStopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBusStopListViewController.swift; sourceTree = "<group>"; };
 		AACE2C5123969CC700A46CD4 /* BusPlusA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACE2C5423969CC700A46CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +191,9 @@
 				AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */,
 				AAAAE6D7239CC7B8003EAA4F /* StopsNearbyBusListTableViewController.swift */,
 				AAAAE6D9239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift */,
+				AAAAE6DB239D084B003EAA4F /* SearchBusViewController.swift */,
+				AAAAE6DD239D17FA003EAA4F /* SearchBusResultTableViewController.swift */,
+				AAAAE6DF239D37F0003EAA4F /* SearchBusStopListViewController.swift */,
 			);
 			path = BusPlusA;
 			sourceTree = "<group>";
@@ -449,11 +458,13 @@
 			files = (
 				AAAAE6DA239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift in Sources */,
 				AACE2C92239A27E500A46CD4 /* AboutViewController.swift in Sources */,
+				AAAAE6DE239D17FA003EAA4F /* SearchBusResultTableViewController.swift in Sources */,
 				AACE2C872396A4BD00A46CD4 /* HomeTableViewController.swift in Sources */,
 				AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */,
 				AAAAE6D6239C4975003EAA4F /* StopsNearbyTableViewController.swift in Sources */,
 				AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */,
 				AACE2C902397961800A46CD4 /* RouteViewController.swift in Sources */,
+				AAAAE6DC239D084B003EAA4F /* SearchBusViewController.swift in Sources */,
 				AAAAE6CC239AB6F7003EAA4F /* Route2ViewController.swift in Sources */,
 				AAAAE6CE239BC145003EAA4F /* DirectionsViewController.swift in Sources */,
 				AACE2C8B2396CFB900A46CD4 /* FavoriteListTableViewController.swift in Sources */,
@@ -462,6 +473,7 @@
 				AA8E99DF239A447D002C795C /* BookedRouteViewController.swift in Sources */,
 				AA0EDA14239AA326002E8E51 /* TakingBusViewController.swift in Sources */,
 				AAAAE6D8239CC7B8003EAA4F /* StopsNearbyBusListTableViewController.swift in Sources */,
+				AAAAE6E0239D37F0003EAA4F /* SearchBusStopListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

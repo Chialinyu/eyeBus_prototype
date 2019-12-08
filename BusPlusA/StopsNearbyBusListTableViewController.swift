@@ -15,7 +15,6 @@ class StopNearbyBusListCell:UITableViewCell {
     @IBOutlet weak var nbStopBusDirectionLabel: UILabel!
     @IBOutlet weak var nbStopBusTimeLabel: UILabel!
     @IBOutlet weak var nbStopBusBookLabel: UILabel!
-    
 }
 
 class StopsNearbyBusListTableViewController: UITableViewController {
@@ -103,7 +102,7 @@ class StopsNearbyBusListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let bookedBus = busList_name[indexPath.row]
+    let bookedBus = busList_name[indexPath.row]
         
         if isUserArrive == false {
             let alertController = UIAlertController(title: "預約失敗，到達等候區時可啟動預約功能", message: nil, preferredStyle: .alert)
@@ -125,7 +124,7 @@ class StopsNearbyBusListTableViewController: UITableViewController {
             let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
                 let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
                 
-                bookedView.busSection = indexPath.section
+                bookedView.busSection = 0
                 bookedView.busName = bookedBus
                 bookedView.busRow = 0
                 bookedView.routeName = "route2"
@@ -145,10 +144,9 @@ class StopsNearbyBusListTableViewController: UITableViewController {
         } else if Int(busList_time[indexPath.row]) ?? 0 < 6 {
             let alertController = UIAlertController(title: "將在5分鐘內進站的公車無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
             let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
-                let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
+            let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
                 
-                bookedView.busSection = indexPath.section
-                
+                bookedView.busSection = 0
                 bookedView.busName = bookedBus
                 bookedView.busRow = 0
                 bookedView.routeName = "route2"
@@ -158,6 +156,7 @@ class StopsNearbyBusListTableViewController: UITableViewController {
                 Database.database().reference().child("isBook").setValue(1)
                 bookedView.modalPresentationStyle = .fullScreen
                 self.present(bookedView, animated: true, completion: nil)
+                
             }
             alertController.addAction(acceptAction)
             
@@ -172,7 +171,7 @@ class StopsNearbyBusListTableViewController: UITableViewController {
                                                     
                 let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
                 
-                bookedView.busSection = indexPath.section
+                bookedView.busSection = 0
                 bookedView.busName = bookedBus
                 bookedView.busRow = 0
                 bookedView.routeName = "route2"

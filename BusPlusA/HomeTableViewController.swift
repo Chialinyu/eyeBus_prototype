@@ -86,8 +86,11 @@ class HomeTableViewController: UITableViewController {
             navigationController?.pushViewController(directionView, animated: true)
             
         case 2:
-            let directionView = storyboard?.instantiateViewController(withIdentifier: "nearbyListID") as! StopsNearbyTableViewController
-            navigationController?.pushViewController(directionView, animated: true)
+            let nearbyStopsView = storyboard?.instantiateViewController(withIdentifier: "nearbyListID") as! StopsNearbyTableViewController
+            navigationController?.pushViewController(nearbyStopsView, animated: true)
+        case 3:
+        let searchBusView = storyboard?.instantiateViewController(withIdentifier: "searchBusViewID") as! SearchBusViewController
+        navigationController?.pushViewController(searchBusView, animated: true)
             
         default:
             break

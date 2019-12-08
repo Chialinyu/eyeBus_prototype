@@ -51,14 +51,12 @@ class StopsNearbyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 2 {}
+
         let nearbyBusListView = storyboard?.instantiateViewController(withIdentifier: "stopNbBuseListViewID") as! StopsNearbyBusListTableViewController
         
         nearbyBusListView.busStop = self.nearbyStops[indexPath.row]
         
         navigationController?.pushViewController(nearbyBusListView, animated: true)
     }
-
-    
 
 }
