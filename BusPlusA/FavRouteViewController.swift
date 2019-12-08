@@ -81,7 +81,7 @@ class FavRouteViewController: UIViewController, UITableViewDelegate, UITableView
         })
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
@@ -132,7 +132,7 @@ class FavRouteViewController: UIViewController, UITableViewDelegate, UITableView
             present(alertController, animated: true)
             
         } else {
-            var bookedBus = self.buses[indexPath.row]
+            let bookedBus = self.buses[indexPath.row]
             
             let controller = UIAlertController(title: "是否要預約 " + bookedBus, message: nil, preferredStyle: .actionSheet)
             

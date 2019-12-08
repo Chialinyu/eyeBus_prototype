@@ -32,9 +32,8 @@ class FavoriteListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = "常用路線"
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: self, action: nil)
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "編輯", style: .done, target: self, action: nil)
-
 
         for i in 0 ..< routeIndex.count {
             let ref = Database.database().reference().child("bus-routes").child(routeIndex[i])

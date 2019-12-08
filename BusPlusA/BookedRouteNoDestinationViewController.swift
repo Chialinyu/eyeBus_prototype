@@ -1,8 +1,8 @@
 //
-//  BookedRouteViewController.swift
+//  BookedRouteNoDestinationViewController.swift
 //  BusPlusA
 //
-//  Created by iui on 2019/12/6.
+//  Created by iui on 2019/12/8.
 //  Copyright © 2019 Carolyn Yu. All rights reserved.
 //
 
@@ -10,16 +10,11 @@ import UIKit
 import FirebaseDatabase
 import AudioToolbox
 
-var timer: Timer?
-var shakeCount  = 0
+class BookedRouteNoDestinationViewController: UIViewController {
 
-class BookedRouteViewController: UIViewController {
-    
     @IBOutlet weak var isBookLabel: UILabel!
     @IBOutlet weak var busNameLabel: UILabel!
     @IBOutlet weak var startStopLabel: UILabel!
-    @IBOutlet weak var toLabel: UILabel!
-    @IBOutlet weak var endStopLabel: UILabel!
     
     @IBOutlet weak var stillLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -29,12 +24,10 @@ class BookedRouteViewController: UIViewController {
     @IBOutlet weak var ticketFullView: UIView!
     @IBOutlet weak var timeView: UIView!
     
-    var routeName = "route1"
+    var routeName = "route2"
     var busSection = 0
     var busRow = 0
-    var transferOrEndStop = "圓環"
     var startStop = "南京敦化路口"
-    var endStop = "圓環"
 
     var busName = "南京幹線"
     var busTime = "20"
@@ -62,11 +55,9 @@ class BookedRouteViewController: UIViewController {
         isBookLabel.accessibilityElementsHidden = true
         busNameLabel.accessibilityElementsHidden = true
         startStopLabel.accessibilityElementsHidden = true
-        toLabel.accessibilityElementsHidden = true
-        endStopLabel.accessibilityElementsHidden = true
         
         ticketFullView.isAccessibilityElement = true
-        ticketFullView.accessibilityLabel = "已預約。" + busName + "。" + startStop + "。往。" + transferOrEndStop
+        ticketFullView.accessibilityLabel = "已預約。" + busName + "。" + startStop
         ticketFullView.accessibilityTraits = UIAccessibilityTraits.none
         
         stillLabel.accessibilityElementsHidden = true
@@ -81,7 +72,6 @@ class BookedRouteViewController: UIViewController {
         // static
         busNameLabel.text = busName
         startStopLabel.text = startStop
-        endStopLabel.text = transferOrEndStop
         comingLabel.text = ""
         
         timeLabel.text = busTime
@@ -95,7 +85,6 @@ class BookedRouteViewController: UIViewController {
             let busesSection = busesArray[self.busSection] as! NSArray
             let bus = busesSection[self.busRow] as! NSDictionary
             
-//            self.busName = bus["name"] as! String
             self.busTime = bus["time"] as! String
             
             DispatchQueue.global().async(execute: {
@@ -136,33 +125,8 @@ class BookedRouteViewController: UIViewController {
                 
                 let action1 = UIAlertAction(title:"已上車", style: .default) { (_) in
                     
-                    let alertController = UIAlertController(title: nil , message: "已確認上車，是否需要開啟下車提醒", preferredStyle: .alert)
-                    let acceptAction = UIAlertAction(title: "需要", style: .default) { (_) in
-                                                
-                        Database.database().reference().child("isBook").setValue(0)
-                        Database.database().reference().child("isBusArrive").setValue(0)
-                        Database.database().reference().child("isBookGetOffBus").setValue(1)
-                        
-                        let takeBusView = self.storyboard?.instantiateViewController(withIdentifier: "takeBusID") as! TakingBusViewController
-                        takeBusView.modalPresentationStyle = .fullScreen
-                        takeBusView.routeName = self.routeName
-                        takeBusView.busSection = self.busSection
-                        takeBusView.busRow = self.busRow
-                        takeBusView.busName = self.busName
-                        takeBusView.startStop = self.startStop
-                        takeBusView.transferOrEndStop = self.transferOrEndStop
-                        takeBusView.finalStop = self.endStop
-                        
-                        
-                        takeBusView.nowSectionOfRoute = self.nowSectionOfRoute
-                        takeBusView.sectionCount = self.sectionCount
-                        
-                        self.present(takeBusView, animated: true, completion: nil)
-                        
-                    }
-                    alertController.addAction(acceptAction)
-                    
-                    let cancelAction = UIAlertAction(title: "不需要", style: .cancel) { (_) in
+                    let alertController = UIAlertController(title: nil , message: "已確認上車，結束預約服務。", preferredStyle: .alert)
+                    let acceptAction = UIAlertAction(title: "確認", style: .default) { (_) in
                         self.dismiss(animated: true, completion: nil)
                         Database.database().reference().child("isBook").setValue(0)
                         Database.database().reference().child("isBusArrive").setValue(0)
@@ -178,7 +142,7 @@ class BookedRouteViewController: UIViewController {
                             }
                         }
                     }
-                    alertController.addAction(cancelAction)
+                    alertController.addAction(acceptAction)
                     
                     self.present(alertController, animated: true) {}
                     
@@ -222,8 +186,6 @@ class BookedRouteViewController: UIViewController {
         })
     }
     
-    
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeHandles()
@@ -261,7 +223,7 @@ class BookedRouteViewController: UIViewController {
             
         }
     }
-    
+
     /*
     // MARK: - Navigation
 

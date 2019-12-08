@@ -38,7 +38,7 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         routeTableView.delegate = self
         routeTableView.dataSource = self
-        
+                
         Database.database().reference().child("currentBusStop").setValue(0)
         
         let ref = Database.database().reference().child("bus-routes").child(routeIndex[selectIndex])
@@ -83,7 +83,7 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
@@ -134,7 +134,7 @@ class RouteViewController: UIViewController, UITableViewDelegate, UITableViewDat
             present(alertController, animated: true)
             
         } else {
-            var bookedBus = self.buses[indexPath.row]
+            let bookedBus = self.buses[indexPath.row]
             
             let controller = UIAlertController(title: "是否要預約 " + bookedBus, message: nil, preferredStyle: .actionSheet)
             

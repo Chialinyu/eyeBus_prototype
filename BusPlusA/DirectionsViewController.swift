@@ -72,8 +72,6 @@ class DirectionsViewController: UIViewController, UITextFieldDelegate, UITableVi
         urLocationTextField.resignFirstResponder()
         urForwardTextField.resignFirstResponder()
         
-        
-        
         if CFStringHasPrefix(urForward as CFString, "圓環" as CFString) || CFStringHasPrefix(urForward as CFString, "南京" as CFString) {
             status = 1
         } else if CFStringHasPrefix(urForward as CFString, "捷運" as CFString) || CFStringHasPrefix(urForward as CFString, "中山" as CFString) || CFStringHasPrefix(urForward as CFString, "志仁" as CFString) || CFStringHasPrefix(urForward as CFString, "高中" as CFString) {
@@ -84,6 +82,9 @@ class DirectionsViewController: UIViewController, UITextFieldDelegate, UITableVi
         
         resultTableView.reloadData()
         
+        // move focus to next element
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,  argument: self.resultTableView);
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
