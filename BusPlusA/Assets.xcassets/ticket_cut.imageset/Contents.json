@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ticket_cut.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ticket_cut-1.png",
+      "filename" : "票卡切角.png",
       "scale" : "2x"
     },
     {

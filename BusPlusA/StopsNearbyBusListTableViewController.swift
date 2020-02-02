@@ -20,8 +20,8 @@ class StopNearbyBusListCell:UITableViewCell {
 class StopsNearbyBusListTableViewController: UITableViewController {
 
     let busList_name = ["3 3", "3 3", "4 6", "4 6", "2 6 2 區", "2 6 2 區", "2 6 6 承德幹線", "2 6 6 承德幹線", "2 8 2 副", "2 8 2 副", "3 0 6 區", "3 0 6 區", "棕 9 南京幹線", "棕 9 南京幹線", "紅 25", "紅 25"]
-    let busList_direction = ["大直美麗華", "永春高中", "大直美麗華", "松德站", "民生社區", "中和", "捷運市政府站", "新北投", "圓環", "動物園", "台北橋", "舊莊", "圓環", "大直美麗華", "捷運北門站", "南港"]
-    let busList_time = ["9", "13", "0", "1", "4", "15", "8", "1", "20", "5", "11", "-1", "6", "1", "13", "7"]
+    let busList_direction = ["大直美麗華", "永春高中", "大直美麗華", "松德站", "民生社區", "中和", "捷運市政府站", "新北投", "圓環", "動物園", "台北橋", "舊莊", "圓環", "南港高工", "捷運北門站", "南港"]
+    let busList_time = ["9", "13", "0", "1", "4", "15", "8", "1", "20", "5", "11", "-1", "15", "1", "13", "7"]
     // -1:末班駛離(灰) 0: 未發車(灰) 1~2: 進站中(黃) 3~5:時間(淺藍) 5+:時間(藍)
     
     var busStop = "南京敦化路口(小巨蛋)"
@@ -89,7 +89,8 @@ class StopsNearbyBusListTableViewController: UITableViewController {
             cell.nbStopBusDirectionLabel.textColor = UIColor(rgb: 0x000000)
             cell.nbStopBusTimeLabel.textColor = UIColor(rgb: 0x000000)
         } else if Int(busList_time[indexPath.row]) ?? 0 < 6 {
-            cell.nbStopBusImg.image = UIImage(named: "nbStop_lightBlue")
+//            cell.nbStopBusImg.image = UIImage(named: "nbStop_lightBlue")
+            cell.nbStopBusImg.image = UIImage(named: "nbStop_yellow")
             cell.nbStopBusTimeLabel.text = busList_time[indexPath.row] + " 分鐘進站"
             cell.nbStopBusBookLabel.text = ""
             cell.nbStopBusNameLabel.textColor = UIColor(rgb: 0x000000)
@@ -104,24 +105,70 @@ class StopsNearbyBusListTableViewController: UITableViewController {
         
     let bookedBus = busList_name[indexPath.row]
         
-        if isUserArrive == false {
-            let alertController = UIAlertController(title: "預約失敗，到達等候區時可啟動預約功能", message: nil, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true)
-        } else if Int(busList_time[indexPath.row]) ?? 0 == 0 {
-            let alertController = UIAlertController(title: "尚未發車，請預約其他公車", message: nil, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true)
-        } else if Int(busList_time[indexPath.row]) ?? 0 == -1 {
-            let alertController = UIAlertController(title: "末班駛離，請預約其他公車", message: nil, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true)
-        } else if Int(busList_time[indexPath.row]) ?? 0 < 3 {
-            let alertController = UIAlertController(title: "公車進站中無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
-            let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+        let controller = UIAlertController(title: "選擇要進行的動作" /*"是否要預約 " + bookedBus*/, message: nil, preferredStyle: .actionSheet)
+        let action = UIAlertAction(title:"預約上車", style: .default) { (_) in
+            
+            if self.isUserArrive == false {
+                let alertController = UIAlertController(title: "提醒您，到達等候區時才可啟動預約功能", message: nil, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true)
+            } else if Int(self.busList_time[indexPath.row]) ?? 0 == 0 {
+                let alertController = UIAlertController(title: "尚未發車，請預約其他公車", message: nil, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true)
+            } else if Int(self.busList_time[indexPath.row]) ?? 0 == -1 {
+                let alertController = UIAlertController(title: "末班駛離，請預約其他公車", message: nil, preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true)
+            } else if Int(self.busList_time[indexPath.row]) ?? 0 < 3 {
+                let alertController = UIAlertController(title: "公車進站中無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
+                let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+                    let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
+                    
+                    bookedView.busSection = 0
+                    bookedView.busName = bookedBus
+                    bookedView.busRow = 0
+                    bookedView.routeName = "route2"
+                    bookedView.startStop = self.busStop
+                    bookedView.nowSectionOfRoute = 0
+                    bookedView.sectionCount = 2
+                    Database.database().reference().child("isBook").setValue(1)
+                    bookedView.modalPresentationStyle = .fullScreen
+                    self.present(bookedView, animated: true, completion: nil)
+                }
+                alertController.addAction(acceptAction)
+                
+                let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in
+                }
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true)
+            } else if Int(self.busList_time[indexPath.row]) ?? 0 < 6 {
+                let alertController = UIAlertController(title: "將在5分鐘內進站的公車無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
+                let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+                let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
+                    
+                    bookedView.busSection = 0
+                    bookedView.busName = bookedBus
+                    bookedView.busRow = 0
+                    bookedView.routeName = "route2"
+                    bookedView.startStop = self.busStop
+                    bookedView.nowSectionOfRoute = 0
+                    bookedView.sectionCount = 2
+                    Database.database().reference().child("isBook").setValue(1)
+                    bookedView.modalPresentationStyle = .fullScreen
+                    self.present(bookedView, animated: true, completion: nil)
+                    
+                }
+                alertController.addAction(acceptAction)
+                
+                let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in
+                }
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true)
+            } else {
                 let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
                 
                 bookedView.busSection = 0
@@ -135,62 +182,151 @@ class StopsNearbyBusListTableViewController: UITableViewController {
                 bookedView.modalPresentationStyle = .fullScreen
                 self.present(bookedView, animated: true, completion: nil)
             }
-            alertController.addAction(acceptAction)
             
-            let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in
-            }
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true)
-        } else if Int(busList_time[indexPath.row]) ?? 0 < 6 {
-            let alertController = UIAlertController(title: "將在5分鐘內進站的公車無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
-            let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
-            let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
-                
-                bookedView.busSection = 0
-                bookedView.busName = bookedBus
-                bookedView.busRow = 0
-                bookedView.routeName = "route2"
-                bookedView.startStop = self.busStop
-                bookedView.nowSectionOfRoute = 0
-                bookedView.sectionCount = 2
-                Database.database().reference().child("isBook").setValue(1)
-                bookedView.modalPresentationStyle = .fullScreen
-                self.present(bookedView, animated: true, completion: nil)
-                
-            }
-            alertController.addAction(acceptAction)
-            
-            let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in
-            }
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true)
-        } else {
-            
-            let controller = UIAlertController(title: "是否要預約 " + bookedBus, message: nil, preferredStyle: .actionSheet)
-            let action = UIAlertAction(title:"預約上車", style: .default) { (_) in
-                                                    
-                let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
-                
-                bookedView.busSection = 0
-                bookedView.busName = bookedBus
-                bookedView.busRow = 0
-                bookedView.routeName = "route2"
-                bookedView.startStop = self.busStop
-                bookedView.nowSectionOfRoute = 0
-                bookedView.sectionCount = 2
-                Database.database().reference().child("isBook").setValue(1)
-                bookedView.modalPresentationStyle = .fullScreen
-                self.present(bookedView, animated: true, completion: nil)
-                
-            }
-            controller.addAction(action)
-
-            let cancelAction = UIAlertAction(title: "取消預約", style: .cancel){ (_) in
-            }
-            controller.addAction(cancelAction)
-
-            present(controller, animated: true, completion: nil)
         }
+        controller.addAction(action)
+
+        let action2 = UIAlertAction(title:"加入常用站牌", style: .default) { (_) in
+            let alertController = UIAlertController(title: "加入常用站牌：\n" + self.busStop, message: nil, preferredStyle: .alert)
+            
+            let confirmAction = UIAlertAction(title: "確認", style: .default) { (_) in
+                
+                let alertMessage = UIAlertController(title: "已加入常用站牌", message: nil, preferredStyle: .alert)
+                self.present(alertMessage, animated: true)
+                // only show n second
+                let when = DispatchTime.now() + 2
+                DispatchQueue.main.asyncAfter(deadline: when){
+                  alertMessage.dismiss(animated: true, completion: nil)
+                }
+            }
+            alertController.addAction(confirmAction)
+            
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in }
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true)
+            
+            
+        }
+        controller.addAction(action2)
+        
+        let cancelAction = UIAlertAction(title: "取消預約", style: .cancel){ (_) in
+        }
+        controller.addAction(cancelAction)
+
+        present(controller, animated: true, completion: nil)
+        
+        // ---
+        
+//        if isUserArrive == false {
+//            let alertController = UIAlertController(title: "預約失敗，到達等候區時可啟動預約功能", message: nil, preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+//            alertController.addAction(cancelAction)
+//            present(alertController, animated: true)
+//        } else if Int(busList_time[indexPath.row]) ?? 0 == 0 {
+//            let alertController = UIAlertController(title: "尚未發車，請預約其他公車", message: nil, preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+//            alertController.addAction(cancelAction)
+//            present(alertController, animated: true)
+//        } else if Int(busList_time[indexPath.row]) ?? 0 == -1 {
+//            let alertController = UIAlertController(title: "末班駛離，請預約其他公車", message: nil, preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+//            alertController.addAction(cancelAction)
+//            present(alertController, animated: true)
+//        } else if Int(busList_time[indexPath.row]) ?? 0 < 3 {
+//            let alertController = UIAlertController(title: "公車進站中無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
+//            let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+//                let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
+//
+//                bookedView.busSection = 0
+//                bookedView.busName = bookedBus
+//                bookedView.busRow = 0
+//                bookedView.routeName = "route2"
+//                bookedView.startStop = self.busStop
+//                bookedView.nowSectionOfRoute = 0
+//                bookedView.sectionCount = 2
+//                Database.database().reference().child("isBook").setValue(1)
+//                bookedView.modalPresentationStyle = .fullScreen
+//                self.present(bookedView, animated: true, completion: nil)
+//            }
+//            alertController.addAction(acceptAction)
+//
+//            let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in
+//            }
+//            alertController.addAction(cancelAction)
+//            present(alertController, animated: true)
+//        } else if Int(busList_time[indexPath.row]) ?? 0 < 6 {
+//            let alertController = UIAlertController(title: "將在5分鐘內進站的公車無法預約，是否要預約下一班 " + bookedBus + " 還有 15 分鐘進站", message: nil, preferredStyle: .alert)
+//            let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+//            let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
+//
+//                bookedView.busSection = 0
+//                bookedView.busName = bookedBus
+//                bookedView.busRow = 0
+//                bookedView.routeName = "route2"
+//                bookedView.startStop = self.busStop
+//                bookedView.nowSectionOfRoute = 0
+//                bookedView.sectionCount = 2
+//                Database.database().reference().child("isBook").setValue(1)
+//                bookedView.modalPresentationStyle = .fullScreen
+//                self.present(bookedView, animated: true, completion: nil)
+//
+//            }
+//            alertController.addAction(acceptAction)
+//
+//            let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in
+//            }
+//            alertController.addAction(cancelAction)
+//            present(alertController, animated: true)
+//        } else {
+//            let controller = UIAlertController(title: "選擇要進行的動作" /*"是否要預約 " + bookedBus*/, message: nil, preferredStyle: .actionSheet)
+//            let action = UIAlertAction(title:"預約上車", style: .default) { (_) in
+//
+//                let bookedView = self.storyboard?.instantiateViewController(withIdentifier: "bookNoDestinationViewID") as! BookedRouteNoDestinationViewController
+//
+//                bookedView.busSection = 0
+//                bookedView.busName = bookedBus
+//                bookedView.busRow = 0
+//                bookedView.routeName = "route2"
+//                bookedView.startStop = self.busStop
+//                bookedView.nowSectionOfRoute = 0
+//                bookedView.sectionCount = 2
+//                Database.database().reference().child("isBook").setValue(1)
+//                bookedView.modalPresentationStyle = .fullScreen
+//                self.present(bookedView, animated: true, completion: nil)
+//
+//            }
+//            controller.addAction(action)
+//
+//            let action2 = UIAlertAction(title:"加入常用站牌", style: .default) { (_) in
+//                let alertController = UIAlertController(title: "加入常用站牌：\n" + self.stopsList[index], message: nil, preferredStyle: .alert)
+//
+//                let confirmAction = UIAlertAction(title: "確認", style: .default) { (_) in
+//
+//                    let alertMessage = UIAlertController(title: "已加入常用站牌", message: nil, preferredStyle: .alert)
+//                    self.present(alertMessage, animated: true)
+//                    // only show n second
+//                    let when = DispatchTime.now() + 2
+//                    DispatchQueue.main.asyncAfter(deadline: when){
+//                      alertMessage.dismiss(animated: true, completion: nil)
+//                    }
+//                }
+//                alertController.addAction(confirmAction)
+//
+//                let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in }
+//                alertController.addAction(cancelAction)
+//                self.present(alertController, animated: true)
+//
+//
+//            }
+//            controller.addAction(action2)
+//
+//            let cancelAction = UIAlertAction(title: "取消預約", style: .cancel){ (_) in
+//            }
+//            controller.addAction(cancelAction)
+//
+//            present(controller, animated: true, completion: nil)
+//        }
+        
     }
     
 }

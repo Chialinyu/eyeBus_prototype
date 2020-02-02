@@ -228,7 +228,7 @@ class Route2ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         if isUserArrive == false || indexPath.section != 0 {
-            let alertController = UIAlertController(title: "預約失敗，到達等候區時可啟動預約功能", message: nil, preferredStyle: .alert)
+            let alertController = UIAlertController(title: "提醒您，到達等候區時才可啟動預約功能", message: nil, preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
             alertController.addAction(cancelAction)
             present(alertController, animated: true)

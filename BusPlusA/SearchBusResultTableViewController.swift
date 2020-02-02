@@ -53,6 +53,7 @@ class SearchBusResultTableViewController: UITableViewController {
 
         let searchBusStopView = storyboard?.instantiateViewController(withIdentifier: "searchBusStopViewID") as! SearchBusStopListViewController
 
+        searchBusStopView.isFromFav = 0
         searchBusStopView.busName = self.resultBusList[indexPath.row]
 
         navigationController?.pushViewController(searchBusStopView, animated: true)

@@ -55,9 +55,13 @@ class SearchBusViewController: UIViewController, UITextFieldDelegate{
         // Do any additional setup after loading the view.
         searchBusTextField.delegate = self
         
+        searchBusTextField.isUserInteractionEnabled = false
         searchBusTextField.attributedPlaceholder = NSAttributedString(string: "輸入公車號碼",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
         searchBusBtn.addTarget(self, action: #selector(clickButton), for: .touchUpInside)
+        
+        btnTextVoice.accessibilityLabel = "語音輸入"
         
         btnText1.addTarget(self, action: #selector(clickTextBtn), for: .touchUpInside)
         btnText2.addTarget(self, action: #selector(clickTextBtn), for: .touchUpInside)
@@ -68,6 +72,35 @@ class SearchBusViewController: UIViewController, UITextFieldDelegate{
         btnText7.addTarget(self, action: #selector(clickTextBtn), for: .touchUpInside)
         btnText8.addTarget(self, action: #selector(clickTextBtn), for: .touchUpInside)
         btnText9.addTarget(self, action: #selector(clickTextBtn), for: .touchUpInside)
+        
+        btnRed.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnOrange.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnBrown.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnGreen.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnBlue.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnF.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnR.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnT.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnSmall.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        btnNight.addTarget(self, action: #selector(addTextBtn), for: .touchUpInside)
+        
+        btn1.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn2.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn3.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn4.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn5.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn6.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn7.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn8.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn9.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        btn0.addTarget(self, action: #selector(addNumBtn), for: .touchUpInside)
+        
+        btnReset.addTarget(self, action: #selector(resetBtn), for: .touchUpInside)
+        
+//        let busListBtn = UIBarButtonItem(image: UIImage(named: "searchBus_icon_list"), style: .done, target: self, action:#selector(clickListButton) )
+//        navigationItem.rightBarButtonItem = busListBtn
+//        navigationItem.rightBarButtonItem?.accessibilityLabel = "常用公車列表"
+//        navigationItem.rightBarButtonItem?.accessibilityTraits = UIAccessibilityTraits.none
 
     }
     
@@ -83,15 +116,24 @@ class SearchBusViewController: UIViewController, UITextFieldDelegate{
     
     
     @objc func clickButton() {
-        
+
         searchBusText = searchBusTextField.text ?? ""
-                
-        self.view.endEditing(true)
-        searchBusTextField.resignFirstResponder()
-        
-        if CFStringHasPrefix(searchBusText as CFString, "棕" as CFString) {
-            
+        if searchBusText == "" {
+            searchBusText = "幹線"
         }
+
+//        self.view.endEditing(true)
+//        searchBusTextField.resignFirstResponder()
+//
+//        if CFStringHasPrefix(searchBusText as CFString, "棕" as CFString) {
+//
+//        }
+        
+        let resultView = storyboard?.instantiateViewController(withIdentifier: "searchBusResultViewID") as! SearchBusResultTableViewController
+        
+        resultView.keyWord = searchBusText
+        
+        navigationController?.pushViewController(resultView, animated: true)
 
     }
     
@@ -100,6 +142,28 @@ class SearchBusViewController: UIViewController, UITextFieldDelegate{
         
         resultView.keyWord = sender.titleLabel?.text ?? "其他"
         
+        navigationController?.pushViewController(resultView, animated: true)
+    }
+    
+    @objc func addTextBtn(sender:UIButton) {
+        searchBusTextField.text = sender.titleLabel!.text ?? ""
+        searchBusText = sender.titleLabel!.text ?? ""
+    }
+    
+    @objc func addNumBtn(sender:UIButton) {
+        searchBusTextField.text = searchBusText + (sender.titleLabel!.text ?? "")
+        searchBusText = searchBusText + (sender.titleLabel!.text ?? "")
+    }
+    
+    @objc func resetBtn(sender:UIButton) {
+        searchBusTextField.text = ""
+        searchBusText = ""
+    }
+    
+    
+    @objc func clickListButton() {
+        let resultView = storyboard?.instantiateViewController(withIdentifier: "favBusViewID") as! FavBusTableViewController
+                
         navigationController?.pushViewController(resultView, animated: true)
     }
 

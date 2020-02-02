@@ -17,8 +17,8 @@ class HomeTableViewCell: UITableViewCell{
 
 class HomeTableViewController: UITableViewController {
     
-    var functionCell = ["常用路線", "規劃路線", "附近站牌", "搜尋公車"]
-    var iconList = ["home_icon_circle", "home_icon_cross", "home_icon_triangle", "home_icon_square"]
+    var functionCell = ["常用路線", "規劃路線", "附近站牌", "搜尋公車", "常用公車", "常用站牌"]
+//    var iconList = ["home_icon_circle", "home_icon_cross", "home_icon_triangle", "home_icon_square", "home_icon_square", "home_icon_square"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class HomeTableViewController: UITableViewController {
                 
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title:"關於", style:.done, target: self, action: #selector(addTapped))
-        self.navigationItem.leftBarButtonItem?.accessibilityLabel = "關於此 App"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title:"說明", style:.done, target: self, action: #selector(addTapped))
+        self.navigationItem.leftBarButtonItem?.accessibilityLabel = "使用說明"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title:"設定", style:.done, target: self, action: nil)
         
@@ -60,7 +60,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
 
-        cell.iconImg.image =  UIImage(named: iconList[indexPath.row])
+//        cell.iconImg.image =  UIImage(named: iconList[indexPath.row])
         cell.functionLabel.text = functionCell[indexPath.row]
         cell.backgroundView = UIImageView(image: UIImage(named: "home_Cell_Bg"))
         
@@ -91,6 +91,14 @@ class HomeTableViewController: UITableViewController {
         case 3:
         let searchBusView = storyboard?.instantiateViewController(withIdentifier: "searchBusViewID") as! SearchBusViewController
         navigationController?.pushViewController(searchBusView, animated: true)
+            
+        case 4:
+            let favBusView = storyboard?.instantiateViewController(withIdentifier: "favBusViewID") as! FavBusTableViewController
+            navigationController?.pushViewController(favBusView, animated: true)
+        
+        case 5:
+            let favStopView = storyboard?.instantiateViewController(withIdentifier: "favStopViewID") as! FavStopTableViewController
+            navigationController?.pushViewController(favStopView, animated: true)
             
         default:
             break

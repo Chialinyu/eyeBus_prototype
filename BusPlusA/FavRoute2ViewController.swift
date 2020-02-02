@@ -227,7 +227,7 @@ class FavRoute2ViewController: UIViewController, UITableViewDelegate, UITableVie
        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
            if isUserArrive == false || indexPath.section != 0 {
-               let alertController = UIAlertController(title: "預約失敗，到達等候區時可啟動預約功能", message: nil, preferredStyle: .alert)
+               let alertController = UIAlertController(title: "提醒您，到達等候區時才可啟動預約功能", message: nil, preferredStyle: .alert)
                let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
                alertController.addAction(cancelAction)
                present(alertController, animated: true)
@@ -276,12 +276,17 @@ class FavRoute2ViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @objc func clickButton() {
         let alertController = UIAlertController(title: "已加入常用路線", message: nil, preferredStyle: .alert)
-        let acceptAction = UIAlertAction(title: "確認", style: .default) { (_) in
-            self.dismiss(animated: true, completion: nil)
-        }
-        alertController.addAction(acceptAction)
-    
+//        let acceptAction = UIAlertAction(title: "確認", style: .default) { (_) in
+//            self.dismiss(animated: true, completion: nil)
+//        }
+//        alertController.addAction(acceptAction)
         present(alertController, animated: true) {}
+        // only show n second
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+          alertController.dismiss(animated: true, completion: nil)
+        }
+        
         addFavBtn.isEnabled =  false
         addFavBtn.setTitle("已加入常用路線", for: .normal)
         addFavImg.image = UIImage(named: "add_fav_btn_gray")

@@ -11,6 +11,10 @@
 		403B3715A24DCA6B172B1BEF /* Pods_BusPlusA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE07C1903175FB895D54306 /* Pods_BusPlusA.framework */; };
 		8EEA13A1912FBBEAE895DABD /* Pods_BusPlusATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1BC2ADF26A346DD8952E0C /* Pods_BusPlusATests.framework */; };
 		AA0EDA14239AA326002E8E51 /* TakingBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0EDA13239AA326002E8E51 /* TakingBusViewController.swift */; };
+		AA6064E523E59F000059B779 /* TakingBusNoNotifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6064E423E59F000059B779 /* TakingBusNoNotifiViewController.swift */; };
+		AA6064E723E6B0BD0059B779 /* FavStopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6064E623E6B0BD0059B779 /* FavStopTableViewController.swift */; };
+		AA6064EB23E6BC0C0059B779 /* FavStopBusListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6064EA23E6BC0C0059B779 /* FavStopBusListTableViewController.swift */; };
+		AA6064ED23E6C6BC0059B779 /* TakingBusNoNotifiNoDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6064EC23E6C6BC0059B779 /* TakingBusNoNotifiNoDestinationViewController.swift */; };
 		AA8E99DF239A447D002C795C /* BookedRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8E99DE239A447D002C795C /* BookedRouteViewController.swift */; };
 		AAAAE6CC239AB6F7003EAA4F /* Route2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CB239AB6F7003EAA4F /* Route2ViewController.swift */; };
 		AAAAE6CE239BC145003EAA4F /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */; };
@@ -22,6 +26,7 @@
 		AAAAE6DC239D084B003EAA4F /* SearchBusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6DB239D084B003EAA4F /* SearchBusViewController.swift */; };
 		AAAAE6DE239D17FA003EAA4F /* SearchBusResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6DD239D17FA003EAA4F /* SearchBusResultTableViewController.swift */; };
 		AAAAE6E0239D37F0003EAA4F /* SearchBusStopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6DF239D37F0003EAA4F /* SearchBusStopListViewController.swift */; };
+		AAAAE6E5239D5649003EAA4F /* FavBusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAE6E4239D5649003EAA4F /* FavBusTableViewController.swift */; };
 		AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5423969CC700A46CD4 /* AppDelegate.swift */; };
 		AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */; };
 		AACE2C5C23969CC700A46CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACE2C5A23969CC700A46CD4 /* Main.storyboard */; };
@@ -61,6 +66,10 @@
 		2C1BC2ADF26A346DD8952E0C /* Pods_BusPlusATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusPlusATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6532E22503A0E76444DB5157 /* Pods-BusPlusA-BusPlusAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusPlusA-BusPlusAUITests.release.xcconfig"; path = "Target Support Files/Pods-BusPlusA-BusPlusAUITests/Pods-BusPlusA-BusPlusAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA0EDA13239AA326002E8E51 /* TakingBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingBusViewController.swift; sourceTree = "<group>"; };
+		AA6064E423E59F000059B779 /* TakingBusNoNotifiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingBusNoNotifiViewController.swift; sourceTree = "<group>"; };
+		AA6064E623E6B0BD0059B779 /* FavStopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavStopTableViewController.swift; sourceTree = "<group>"; };
+		AA6064EA23E6BC0C0059B779 /* FavStopBusListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavStopBusListTableViewController.swift; sourceTree = "<group>"; };
+		AA6064EC23E6C6BC0059B779 /* TakingBusNoNotifiNoDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingBusNoNotifiNoDestinationViewController.swift; sourceTree = "<group>"; };
 		AA8E99DE239A447D002C795C /* BookedRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedRouteViewController.swift; sourceTree = "<group>"; };
 		AAAAE6CB239AB6F7003EAA4F /* Route2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route2ViewController.swift; sourceTree = "<group>"; };
 		AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +81,8 @@
 		AAAAE6DB239D084B003EAA4F /* SearchBusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBusViewController.swift; sourceTree = "<group>"; };
 		AAAAE6DD239D17FA003EAA4F /* SearchBusResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBusResultTableViewController.swift; sourceTree = "<group>"; };
 		AAAAE6DF239D37F0003EAA4F /* SearchBusStopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBusStopListViewController.swift; sourceTree = "<group>"; };
-		AACE2C5123969CC700A46CD4 /* BusPlusA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlusA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAAE6E4239D5649003EAA4F /* FavBusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavBusTableViewController.swift; sourceTree = "<group>"; };
+		AACE2C5123969CC700A46CD4 /* 微笑公車.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微笑公車.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACE2C5423969CC700A46CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AACE2C5623969CC700A46CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AACE2C5B23969CC700A46CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,7 +171,7 @@
 		AACE2C5223969CC700A46CD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AACE2C5123969CC700A46CD4 /* BusPlusA.app */,
+				AACE2C5123969CC700A46CD4 /* 微笑公車.app */,
 				AACE2C6723969CCB00A46CD4 /* BusPlusATests.xctest */,
 				AACE2C7223969CCB00A46CD4 /* BusPlusAUITests.xctest */,
 			);
@@ -185,15 +195,20 @@
 				AAAAE6CB239AB6F7003EAA4F /* Route2ViewController.swift */,
 				AA8E99DE239A447D002C795C /* BookedRouteViewController.swift */,
 				AA0EDA13239AA326002E8E51 /* TakingBusViewController.swift */,
+				AA6064E423E59F000059B779 /* TakingBusNoNotifiViewController.swift */,
 				AAAAE6CD239BC145003EAA4F /* DirectionsViewController.swift */,
 				AAAAE6CF239C25AE003EAA4F /* FavRouteViewController.swift */,
 				AAAAE6D1239C3018003EAA4F /* FavRoute2ViewController.swift */,
 				AAAAE6D5239C4975003EAA4F /* StopsNearbyTableViewController.swift */,
 				AAAAE6D7239CC7B8003EAA4F /* StopsNearbyBusListTableViewController.swift */,
 				AAAAE6D9239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift */,
+				AA6064EC23E6C6BC0059B779 /* TakingBusNoNotifiNoDestinationViewController.swift */,
 				AAAAE6DB239D084B003EAA4F /* SearchBusViewController.swift */,
 				AAAAE6DD239D17FA003EAA4F /* SearchBusResultTableViewController.swift */,
 				AAAAE6DF239D37F0003EAA4F /* SearchBusStopListViewController.swift */,
+				AAAAE6E4239D5649003EAA4F /* FavBusTableViewController.swift */,
+				AA6064E623E6B0BD0059B779 /* FavStopTableViewController.swift */,
+				AA6064EA23E6BC0C0059B779 /* FavStopBusListTableViewController.swift */,
 			);
 			path = BusPlusA;
 			sourceTree = "<group>";
@@ -235,7 +250,7 @@
 			);
 			name = BusPlusA;
 			productName = BusPlusA;
-			productReference = AACE2C5123969CC700A46CD4 /* BusPlusA.app */;
+			productReference = AACE2C5123969CC700A46CD4 /* 微笑公車.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AACE2C6623969CCB00A46CD4 /* BusPlusATests */ = {
@@ -457,14 +472,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAAAE6DA239CF9F2003EAA4F /* BookedRouteNoDestinationViewController.swift in Sources */,
+				AA6064ED23E6C6BC0059B779 /* TakingBusNoNotifiNoDestinationViewController.swift in Sources */,
 				AACE2C92239A27E500A46CD4 /* AboutViewController.swift in Sources */,
 				AAAAE6DE239D17FA003EAA4F /* SearchBusResultTableViewController.swift in Sources */,
+				AAAAE6E5239D5649003EAA4F /* FavBusTableViewController.swift in Sources */,
 				AACE2C872396A4BD00A46CD4 /* HomeTableViewController.swift in Sources */,
 				AACE2C5523969CC700A46CD4 /* AppDelegate.swift in Sources */,
+				AA6064E723E6B0BD0059B779 /* FavStopTableViewController.swift in Sources */,
 				AAAAE6D6239C4975003EAA4F /* StopsNearbyTableViewController.swift in Sources */,
 				AACE2C5723969CC700A46CD4 /* SceneDelegate.swift in Sources */,
 				AACE2C902397961800A46CD4 /* RouteViewController.swift in Sources */,
+				AA6064E523E59F000059B779 /* TakingBusNoNotifiViewController.swift in Sources */,
 				AAAAE6DC239D084B003EAA4F /* SearchBusViewController.swift in Sources */,
+				AA6064EB23E6BC0C0059B779 /* FavStopBusListTableViewController.swift in Sources */,
 				AAAAE6CC239AB6F7003EAA4F /* Route2ViewController.swift in Sources */,
 				AAAAE6CE239BC145003EAA4F /* DirectionsViewController.swift in Sources */,
 				AACE2C8B2396CFB900A46CD4 /* FavoriteListTableViewController.swift in Sources */,
@@ -578,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -632,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -650,13 +670,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8GWYB3B3A;
 				INFOPLIST_FILE = BusPlusA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carolynyu.BusPlusA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微笑公車";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -670,13 +690,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8GWYB3B3A;
 				INFOPLIST_FILE = BusPlusA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carolynyu.BusPlusA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微笑公車";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

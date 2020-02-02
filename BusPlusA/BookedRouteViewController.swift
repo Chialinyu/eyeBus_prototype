@@ -13,6 +13,7 @@ import AudioToolbox
 var timer: Timer?
 var shakeCount  = 0
 
+
 class BookedRouteViewController: UIViewController {
     
     @IBOutlet weak var isBookLabel: UILabel!
@@ -28,6 +29,11 @@ class BookedRouteViewController: UIViewController {
     
     @IBOutlet weak var ticketFullView: UIView!
     @IBOutlet weak var timeView: UIView!
+    
+    @IBOutlet weak var isOnBoardBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var infoBtn: UIButton!
+    
     
     var routeName = "route1"
     var busSection = 0
@@ -65,6 +71,9 @@ class BookedRouteViewController: UIViewController {
         toLabel.accessibilityElementsHidden = true
         endStopLabel.accessibilityElementsHidden = true
         
+        infoBtn.accessibilityLabel = "公車資訊"
+        infoBtn.addTarget(self, action: #selector(clickInfoButton), for: .touchUpInside)
+        
         ticketFullView.isAccessibilityElement = true
         ticketFullView.accessibilityLabel = "已預約。" + busName + "。" + startStop + "。往。" + transferOrEndStop
         ticketFullView.accessibilityTraits = UIAccessibilityTraits.none
@@ -78,6 +87,11 @@ class BookedRouteViewController: UIViewController {
         timeView.accessibilityLabel = "還有" + busTime + "分鐘進站"
         timeView.accessibilityTraits = UIAccessibilityTraits.none
         
+        isOnBoardBtn.accessibilityElementsHidden = true
+        isOnBoardBtn.addTarget(self, action: #selector(clickOnBoardButton), for: .touchUpInside)
+        
+        cancelBtn.addTarget(self, action: #selector(clickCancelButton), for: .touchUpInside)
+        
         // static
         busNameLabel.text = busName
         startStopLabel.text = startStop
@@ -85,6 +99,8 @@ class BookedRouteViewController: UIViewController {
         comingLabel.text = ""
         
         timeLabel.text = busTime
+        
+        isOnBoardBtn.isEnabled =  false
         
         routeRef = Database.database().reference().child("bus-routes").child(routeName)
         busArriveRef = Database.database().reference().child("isBusArrive")
@@ -116,10 +132,18 @@ class BookedRouteViewController: UIViewController {
                         
                         // vibration haptic feedback
                         //1519 peek 1520 pop 1521 nope kSystemSoundID_Vibrate
-                        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                        AudioServicesPlayAlertSound(UInt32(kSystemSoundID_Vibrate))
+                    
                         
                         // voiceover announce
                         UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "即將進站")
+                        
+                        
+                        // turn on the onBoard btn
+                        self.isOnBoardBtn.setBackgroundImage(UIImage(named: "ticket_btn_yellow"), for: UIControl.State.normal)
+                        self.isOnBoardBtn.setTitleColor(.black, for: .normal)
+                        self.isOnBoardBtn.isEnabled = true
+                        self.isOnBoardBtn.accessibilityElementsHidden = false
                         
                     } else if Int(self.busTime) ?? 3 >= 3 {
                         UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "還有" + self.busTime + "分鐘進站")
@@ -136,51 +160,7 @@ class BookedRouteViewController: UIViewController {
                 
                 let action1 = UIAlertAction(title:"已上車", style: .default) { (_) in
                     
-                    let alertController = UIAlertController(title: nil , message: "已確認上車，是否需要開啟下車提醒", preferredStyle: .alert)
-                    let acceptAction = UIAlertAction(title: "需要", style: .default) { (_) in
-                                                
-                        Database.database().reference().child("isBook").setValue(0)
-                        Database.database().reference().child("isBusArrive").setValue(0)
-                        Database.database().reference().child("isBookGetOffBus").setValue(1)
-                        
-                        let takeBusView = self.storyboard?.instantiateViewController(withIdentifier: "takeBusID") as! TakingBusViewController
-                        takeBusView.modalPresentationStyle = .fullScreen
-                        takeBusView.routeName = self.routeName
-                        takeBusView.busSection = self.busSection
-                        takeBusView.busRow = self.busRow
-                        takeBusView.busName = self.busName
-                        takeBusView.startStop = self.startStop
-                        takeBusView.transferOrEndStop = self.transferOrEndStop
-                        takeBusView.finalStop = self.endStop
-                        
-                        
-                        takeBusView.nowSectionOfRoute = self.nowSectionOfRoute
-                        takeBusView.sectionCount = self.sectionCount
-                        
-                        self.present(takeBusView, animated: true, completion: nil)
-                        
-                    }
-                    alertController.addAction(acceptAction)
-                    
-                    let cancelAction = UIAlertAction(title: "不需要", style: .cancel) { (_) in
-                        self.dismiss(animated: true, completion: nil)
-                        Database.database().reference().child("isBook").setValue(0)
-                        Database.database().reference().child("isBusArrive").setValue(0)
-                        Database.database().reference().child("isBookGetOffBus").setValue(0)
-                        
-                        // if not turn on TakeOffAlert jump to next section bus list page
-                        Database.database().reference().child("isUserArrive").setValue(0)
-                        if self.sectionCount > 2 {
-                            if self.nowSectionOfRoute == 0 {
-                                Database.database().reference().child("sectionOfRoute").setValue(1)
-                            } else {
-                                Database.database().reference().child("sectionOfRoute").setValue(0)
-                            }
-                        }
-                    }
-                    alertController.addAction(cancelAction)
-                    
-                    self.present(alertController, animated: true) {}
+                    self.onboardConfirm()
                     
                 }
                 controller.addAction(action1)
@@ -222,7 +202,40 @@ class BookedRouteViewController: UIViewController {
         })
     }
     
+    @objc func clickInfoButton() {
+        let busPlate = "車牌：0 8 0 - F U, \n"
+        let busType = "公車種類：低底盤公車, \n"
+        let busDriver = "駕駛員：王永順"
+        let alertController = UIAlertController(title: "\(busPlate) \(busType) \(busDriver)", message: nil, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "確認", style: .cancel) { (_) in }
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+        
+        // only show n second
+        let when = DispatchTime.now() + 15
+        DispatchQueue.main.asyncAfter(deadline: when){
+          alertController.dismiss(animated: true, completion: nil)
+        }
+    }
     
+    @objc func clickOnBoardButton() {
+        self.onboardConfirm()
+    }
+    
+    @objc func clickCancelButton() {
+        let alertController = UIAlertController(title: "是否要取消預約", message: nil, preferredStyle: .alert)
+        let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+            self.dismiss(animated: true, completion: nil)
+            Database.database().reference().child("isBook").setValue(0)
+        }
+        alertController.addAction(acceptAction)
+        
+        let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in }
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true) {}
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -234,42 +247,77 @@ class BookedRouteViewController: UIViewController {
         busArriveRef!.removeObserver(withHandle: busArriveUpdateHandle)
     }
 
-    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        if motion == .motionShake {
+    func onboardConfirm(){
+        let alertController = UIAlertController(title: nil , message: "已確認上車，是否需要開啟下車提醒", preferredStyle: .alert)
+        let acceptAction = UIAlertAction(title: "需要", style: .default) { (_) in
+                                    
+            Database.database().reference().child("isBook").setValue(0)
+            Database.database().reference().child("isBusArrive").setValue(0)
+            Database.database().reference().child("isBookGetOffBus").setValue(1)
             
-            if shakeCount == 0 {
-                shakeCount = 1
-                timer = Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { (_) in
-                    shakeCount = 0
-                }
-            } else if shakeCount == 1 {
-                shakeCount = 0
-                timer?.invalidate()
-                
-                let alertController = UIAlertController(title: "是否要取消預約", message: nil, preferredStyle: .alert)
-                let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
-                    self.dismiss(animated: true, completion: nil)
-                    Database.database().reference().child("isBook").setValue(0)
-                }
-                alertController.addAction(acceptAction)
-                
-                let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in }
-                alertController.addAction(cancelAction)
-                
-                present(alertController, animated: true) {}
-            }
+            let takeBusView = self.storyboard?.instantiateViewController(withIdentifier: "takeBusID") as! TakingBusViewController
+            takeBusView.modalPresentationStyle = .fullScreen
+            takeBusView.routeName = self.routeName
+            takeBusView.busSection = self.busSection
+            takeBusView.busRow = self.busRow
+            takeBusView.busName = self.busName
+            takeBusView.startStop = self.startStop
+            takeBusView.transferOrEndStop = self.transferOrEndStop
+            takeBusView.finalStop = self.endStop
+            
+            
+            takeBusView.nowSectionOfRoute = self.nowSectionOfRoute
+            takeBusView.sectionCount = self.sectionCount
+            
+            self.present(takeBusView, animated: true, completion: nil)
             
         }
+        alertController.addAction(acceptAction)
+        
+        let cancelAction = UIAlertAction(title: "不需要", style: .default) { (_) in
+            
+            Database.database().reference().child("isBook").setValue(0)
+            Database.database().reference().child("isBusArrive").setValue(0)
+            Database.database().reference().child("isBookGetOffBus").setValue(1)
+            
+            let takeBusView = self.storyboard?.instantiateViewController(withIdentifier: "takeBusNoNotifiID") as! TakingBusNoNotifiViewController
+            takeBusView.modalPresentationStyle = .fullScreen
+            takeBusView.routeName = self.routeName
+            takeBusView.busSection = self.busSection
+            takeBusView.busRow = self.busRow
+            takeBusView.busName = self.busName
+            takeBusView.startStop = self.startStop
+            takeBusView.transferOrEndStop = self.transferOrEndStop
+            takeBusView.finalStop = self.endStop
+            
+            takeBusView.nowSectionOfRoute = self.nowSectionOfRoute
+            takeBusView.sectionCount = self.sectionCount
+            
+            self.present(takeBusView, animated: true, completion: nil)
+            
+//            self.dismiss(animated: true, completion: nil)
+//            Database.database().reference().child("isBook").setValue(0)
+//            Database.database().reference().child("isBusArrive").setValue(0)
+//            Database.database().reference().child("isBookGetOffBus").setValue(0)
+//
+//            // if not turn on TakeOffAlert jump to next section bus list page
+//            Database.database().reference().child("isUserArrive").setValue(0)
+//            if self.sectionCount > 2 {
+//                if self.nowSectionOfRoute == 0 {
+//                    Database.database().reference().child("sectionOfRoute").setValue(1)
+//                } else {
+//                    Database.database().reference().child("sectionOfRoute").setValue(0)
+//                }
+//            }
+            
+        }
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true) {}
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+    
 
 }
