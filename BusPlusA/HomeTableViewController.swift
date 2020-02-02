@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell{
     
-    @IBOutlet weak var iconImg: UIImageView!
+//    @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var functionLabel: UILabel!
     
 }

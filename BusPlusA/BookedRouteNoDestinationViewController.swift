@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import AudioToolbox
+//import AVFoundation
 
 class BookedRouteNoDestinationViewController: UIViewController {
 
@@ -117,9 +118,16 @@ class BookedRouteNoDestinationViewController: UIViewController {
                         self.comingLabel.text = "即將進站"
                         self.timeView.accessibilityLabel = "即將進站"
                         
+                        // to play sound
+                        // 1304 alarm.caf from iOSSystemSoundsLibrary
+                        AudioServicesPlayAlertSound(SystemSoundID(1304))
+                        
                         // vibration haptic feedback
                         //1519 peek 1520 pop 1521 nope kSystemSoundID_Vibrate
-                        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                        for _ in 1...2 {
+                            AudioServicesPlayAlertSound(UInt32(kSystemSoundID_Vibrate))
+                            sleep(1)
+                        }
                         
                         // voiceover announce
                         UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "即將進站")

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import AudioToolbox
+//import AVFoundation
 
 var timer2: Timer?
 var shakeCount2  = 0
@@ -156,6 +157,39 @@ class TakingBusViewController: UIViewController {
         present(alertController, animated: true) {}
     }
     
+    @objc func clickEndButtonAskLike(){
+        let alertController = UIAlertController(title: "是否結束搭乘？", message: nil, preferredStyle: .alert)
+        let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+            
+//            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            
+            Database.database().reference().child("isBookGetOffBus").setValue(0)
+            Database.database().reference().child("currentBusStop").setValue(0)
+            Database.database().reference().child("sectionOfRoute").setValue(0)
+            
+            Database.database().reference().child("isUserArrive").setValue(0)
+            Database.database().reference().child("isAtDestination").setValue(0)
+            
+            let askLikeAlert = UIAlertController(title: "幫司機按個讚？", message: nil, preferredStyle: .alert)
+            let likeAction = UIAlertAction(title: "讚啦！", style: .default) {(_) in
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+            askLikeAlert.addAction(likeAction)
+            let dislikeAction = UIAlertAction(title: "下次吧～", style: .default) { (_) in
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+            askLikeAlert.addAction(dislikeAction)
+            self.present(askLikeAlert, animated: true) {}
+            
+        }
+        alertController.addAction(acceptAction)
+        
+        let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in }
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true) {}
+    }
+    
     @objc func clickEndButtonToNext(){
         toNextSection()
     }
@@ -200,7 +234,10 @@ class TakingBusViewController: UIViewController {
                 if self.nowSectionOfRoute == 0 && self.sectionCount > 2 {
                     self.endBtn.addTarget(self, action: #selector(self.clickEndButtonToNext), for: .touchUpInside)
                 } else {
-                    self.endBtn.addTarget(self, action: #selector(self.clickEndButton), for: .touchUpInside)
+                    
+//                    self.endBtn.addTarget(self, action: #selector(self.clickEndButton), for: .touchUpInside)
+                    self.endBtn.addTarget(self, action: #selector(self.clickEndButtonAskLike), for: .touchUpInside)
+                    
                 }
                 
                 if self.currentBusStop >= self.stops.count - 1 {
@@ -216,9 +253,16 @@ class TakingBusViewController: UIViewController {
                     
                     self.countDownView.accessibilityLabel = "即將抵達。" + self.stops[curBStop]
                     
+                    // to play sound
+                    // 1304 alarm.caf from iOSSystemSoundsLibrary
+                    AudioServicesPlayAlertSound(SystemSoundID(1304))
+                    
                     // vibration haptic feedback
                     //1519 peek 1520 pop 1521 nope kSystemSoundID_Vibrate
-                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                    for _ in 1...2 {
+                        AudioServicesPlayAlertSound(UInt32(kSystemSoundID_Vibrate))
+                        sleep(1)
+                    }
                     
                     // voiceover announce
                     UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "即將抵達。" + self.stops[curBStop] /* + " 站" */);
@@ -293,6 +337,22 @@ class TakingBusViewController: UIViewController {
                 }
                 controller.addAction(cancelAction)
                 self.present(controller, animated: true, completion: nil)
+                
+                // auto fade out after 120 second
+                let when = DispatchTime.now() + 120
+                DispatchQueue.main.asyncAfter(deadline: when){
+                    controller.dismiss(animated: true, completion: nil)
+                    
+                    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+
+                    Database.database().reference().child("isBookGetOffBus").setValue(0)
+                    Database.database().reference().child("sectionOfRoute").setValue(0)
+                    self.currentStopRef?.removeObserver(withHandle: self.currentStopUpdateHandle)
+                    Database.database().reference().child("currentBusStop").setValue(0)
+                    Database.database().reference().child("isUserArrive").setValue(0)
+                    Database.database().reference().child("isAtDestination").setValue(0)
+                }
+                
             }
         }
         
@@ -333,35 +393,7 @@ class TakingBusViewController: UIViewController {
         
 
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-//        if motion == .motionShake {
-//
-//            if shakeCount2 == 0 {
-//                shakeCount2 = 1
-//                timer2 = Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { (_) in
-//                    shakeCount2 = 0
-//                }
-//            } else if shakeCount2 == 1 {
-//                shakeCount2 = 0
-//                timer2?.invalidate()
-//
-//                let alertController = UIAlertController(title: "是否取消預約", message: nil, preferredStyle: .alert)
-//                let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
-//                    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-//
-//                    Database.database().reference().child("isBookGetOffBus").setValue(0)
-//                    Database.database().reference().child("currentBusStop").setValue(0)
-//                    Database.database().reference().child("sectionOfRoute").setValue(0)
-//                }
-//                alertController.addAction(acceptAction)
-//
-//                let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in }
-//                alertController.addAction(cancelAction)
-//
-//                present(alertController, animated: true) {}
-//            }
-//
-//
-//        }
+
     }
 
     /*
