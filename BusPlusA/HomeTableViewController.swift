@@ -17,6 +17,7 @@ class HomeTableViewCell: UITableViewCell{
 
 class HomeTableViewController: UITableViewController {
     
+//    var functionCell = ["規劃路線", "附近站牌", "搜尋公車", "常用公車", "常用站牌"]
     var functionCell = ["常用路線", "規劃路線", "附近站牌", "搜尋公車", "常用公車", "常用站牌"]
 //    var iconList = ["home_icon_circle", "home_icon_cross", "home_icon_triangle", "home_icon_square", "home_icon_square", "home_icon_square"]
     

@@ -16,7 +16,7 @@ class StopsNearbyTableViewCell:UITableViewCell {
 
 class StopsNearbyTableViewController: UITableViewController {
    
-    let nearbyStops = ["市立體育場", "臺視", "南京敦化路口(小巨蛋)", "八德敦化路口"]
+    let nearbyStops = ["市立體育場", "臺視", "捷運南京復興站", "八德敦化路口"]
     let distances = ["45", "103", "204", "304"]
 
     override func viewDidLoad() {

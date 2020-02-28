@@ -157,32 +157,60 @@ class TakingBusViewController: UIViewController {
         present(alertController, animated: true) {}
     }
     
+//    @objc func clickEndButtonAskLike(){
+//        let alertController = UIAlertController(title: "是否結束搭乘？", message: nil, preferredStyle: .alert)
+//        let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
+//
+////            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//
+//            Database.database().reference().child("isBookGetOffBus").setValue(0)
+//            Database.database().reference().child("currentBusStop").setValue(0)
+//            Database.database().reference().child("sectionOfRoute").setValue(0)
+//
+//            Database.database().reference().child("isUserArrive").setValue(0)
+//            Database.database().reference().child("isAtDestination").setValue(0)
+//
+//            let askLikeAlert = UIAlertController(title: "幫司機按個讚？", message: nil, preferredStyle: .alert)
+//            let likeAction = UIAlertAction(title: "讚啦！", style: .default) {(_) in
+//                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//            }
+//            askLikeAlert.addAction(likeAction)
+//            let dislikeAction = UIAlertAction(title: "下次吧～", style: .default) { (_) in
+//                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//            }
+//            askLikeAlert.addAction(dislikeAction)
+//            self.present(askLikeAlert, animated: true) {}
+//
+//        }
+//        alertController.addAction(acceptAction)
+//
+//        let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in }
+//        alertController.addAction(cancelAction)
+//
+//        present(alertController, animated: true) {}
+//    }
+    
     @objc func clickEndButtonAskLike(){
-        let alertController = UIAlertController(title: "是否結束搭乘？", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "是否結束搭乘？", message: nil, preferredStyle: .actionSheet)
         let acceptAction = UIAlertAction(title: "是", style: .default) { (_) in
-            
-//            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            
-            Database.database().reference().child("isBookGetOffBus").setValue(0)
-            Database.database().reference().child("currentBusStop").setValue(0)
-            Database.database().reference().child("sectionOfRoute").setValue(0)
-            
-            Database.database().reference().child("isUserArrive").setValue(0)
-            Database.database().reference().child("isAtDestination").setValue(0)
-            
-            let askLikeAlert = UIAlertController(title: "幫司機按個讚？", message: nil, preferredStyle: .alert)
-            let likeAction = UIAlertAction(title: "讚啦！", style: .default) {(_) in
-                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            }
-            askLikeAlert.addAction(likeAction)
-            let dislikeAction = UIAlertAction(title: "下次吧～", style: .default) { (_) in
-                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            }
-            askLikeAlert.addAction(dislikeAction)
-            self.present(askLikeAlert, animated: true) {}
-            
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(acceptAction)
+    
+        let likeAction = UIAlertAction(title: "是，並幫司機按個讚！", style: .default) { (_) in
+            
+            let likeAlert = UIAlertController(title: "登愣，已幫司機按讚～", message: nil, preferredStyle: .alert)
+            self.present(likeAlert, animated: true)
+            // only show n second
+            let when = DispatchTime.now() + 2
+            DispatchQueue.main.asyncAfter(deadline: when){
+                alertController.dismiss(animated: true, completion: nil)
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+            
+//            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(likeAction)
         
         let cancelAction = UIAlertAction(title: "否", style: .cancel) { (_) in }
         alertController.addAction(cancelAction)

@@ -17,7 +17,7 @@ class FavStopBusListTableViewController: UITableViewController {
     
     let busList_name = ["棕 9 南京幹線","2 8 2", "2 6 6 承德幹線"]
     
-    let busList_direction = ["南港高工", "動物園", "捷運市政府站"]
+    let busList_direction = ["圓環", "動物園", "捷運市政府站"]
     
     let busList_time = ["9", "13", "4"]
     
