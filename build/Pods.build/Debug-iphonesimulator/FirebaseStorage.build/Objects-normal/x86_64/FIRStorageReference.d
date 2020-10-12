@@ -1,0 +1,43 @@
+dependencies: \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/FIRStorageReference.m \
+  /Users/iuilab/Documents/Xcode/BusPlusA/build/Pods.build/Debug-iphonesimulator/FirebaseStorage.build/module.modulemap \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageReference.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorage.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageConstants.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageDownloadTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageObservableTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageMetadata.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageListResult.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageUploadTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageConstants_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageDeleteTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageDownloadTask_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageGetDownloadURLTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageGetMetadataTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageListResult_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageListTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageMetadata_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageReference_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStoragePath.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Public/FIRStorageTaskSnapshot.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageTaskSnapshot_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageTask_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageErrors.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageUtils.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/build/Pods.build/Debug-iphonesimulator/GTMSessionFetcher.build/module.modulemap \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/Target\ Support\ Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageUpdateMetadataTask.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorageUploadTask_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseStorage/Firebase/Storage/Private/FIRStorage_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h

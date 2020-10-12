@@ -1,0 +1,721 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AboutViewController"
+provides-nominal:
+- "0013FFqHAGaHmvcHr19AboutViewControllerC"
+provides-member:
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", ""]
+provides-dynamic-lookup:
+- "changeBtn"
+- "changeFuncLabel"
+- "clickButton"
+- "contextView"
+- "nextLabel"
+- "nowFuncLabel"
+- "nowLabel"
+- "viewDidLoad"
+depends-top-level:
+- !private "%"
+- !private "+"
+- "AboutViewController"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "StringLiteralType"
+- "UIButton"
+- "UILabel"
+- "UITextView"
+- "UIViewController"
+depends-member:
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "UIButton"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "UILabel"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "UITextView"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "changeBtn"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "changeFuncLabel"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "clickButton"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "content"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "contextView"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "deinit"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "funcTitle"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "init"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "nextLabel"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "nowFuncLabel"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "nowLabel"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "status"]
+- !private ["0013FFqHAGaHmvcHr19AboutViewControllerC", "title"]
+- ["0013FFqHAGaHmvcHr19AboutViewControllerC", "viewDidLoad"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "subscript"]
+- !private ["So15CALayerDelegateP", "accessibilityElementsHidden"]
+- !private ["So15CALayerDelegateP", "accessibilityLabel"]
+- !private ["So15CALayerDelegateP", "addTarget"]
+- !private ["So15CALayerDelegateP", "text"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "accessibilityElementsHidden"]
+- !private ["s7CVarArgP", "accessibilityLabel"]
+- !private ["s7CVarArgP", "addTarget"]
+- !private ["s7CVarArgP", "changeBtn"]
+- !private ["s7CVarArgP", "changeFuncLabel"]
+- !private ["s7CVarArgP", "clickButton"]
+- !private ["s7CVarArgP", "content"]
+- !private ["s7CVarArgP", "contextView"]
+- !private ["s7CVarArgP", "funcTitle"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "nextLabel"]
+- !private ["s7CVarArgP", "nowFuncLabel"]
+- !private ["s7CVarArgP", "nowLabel"]
+- !private ["s7CVarArgP", "status"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["Sl", "subscript"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityElementsHidden"]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "addTarget"]
+- !private ["s28CustomDebugStringConvertibleP", "changeBtn"]
+- !private ["s28CustomDebugStringConvertibleP", "changeFuncLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "clickButton"]
+- !private ["s28CustomDebugStringConvertibleP", "content"]
+- !private ["s28CustomDebugStringConvertibleP", "contextView"]
+- !private ["s28CustomDebugStringConvertibleP", "funcTitle"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "nextLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "nowFuncLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "nowLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "status"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s17CustomReflectableP", "accessibilityElementsHidden"]
+- !private ["s17CustomReflectableP", "accessibilityLabel"]
+- !private ["s17CustomReflectableP", "addTarget"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "text"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "accessibilityElementsHidden"]
+- !private ["s23CustomStringConvertibleP", "accessibilityLabel"]
+- !private ["s23CustomStringConvertibleP", "addTarget"]
+- !private ["s23CustomStringConvertibleP", "changeBtn"]
+- !private ["s23CustomStringConvertibleP", "changeFuncLabel"]
+- !private ["s23CustomStringConvertibleP", "clickButton"]
+- !private ["s23CustomStringConvertibleP", "content"]
+- !private ["s23CustomStringConvertibleP", "contextView"]
+- !private ["s23CustomStringConvertibleP", "funcTitle"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "nextLabel"]
+- !private ["s23CustomStringConvertibleP", "nowFuncLabel"]
+- !private ["s23CustomStringConvertibleP", "nowLabel"]
+- !private ["s23CustomStringConvertibleP", "status"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "accessibilityElementsHidden"]
+- !private ["Se", "accessibilityLabel"]
+- !private ["Se", "addTarget"]
+- !private ["Se", "subscript"]
+- !private ["Se", "text"]
+- !private ["SE", "accessibilityElementsHidden"]
+- !private ["SE", "accessibilityLabel"]
+- !private ["SE", "addTarget"]
+- !private ["SE", "subscript"]
+- !private ["SE", "text"]
+- ["SQ", ""]
+- !private ["SQ", "accessibilityElementsHidden"]
+- !private ["SQ", "accessibilityLabel"]
+- !private ["SQ", "addTarget"]
+- !private ["SQ", "changeBtn"]
+- !private ["SQ", "changeFuncLabel"]
+- !private ["SQ", "clickButton"]
+- !private ["SQ", "content"]
+- !private ["SQ", "contextView"]
+- !private ["SQ", "funcTitle"]
+- !private ["SQ", "init"]
+- !private ["SQ", "nextLabel"]
+- !private ["SQ", "nowFuncLabel"]
+- !private ["SQ", "nowLabel"]
+- !private ["SQ", "status"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "text"]
+- !private ["SQ", "title"]
+- !private ["SQ", "touchUpInside"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["So15UIControlEventsV", "touchUpInside"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
+- !private ["s23ExpressibleByNilLiteralP", "accessibilityElementsHidden"]
+- !private ["s23ExpressibleByNilLiteralP", "accessibilityLabel"]
+- !private ["s23ExpressibleByNilLiteralP", "addTarget"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- ["SH", ""]
+- !private ["SH", "accessibilityElementsHidden"]
+- !private ["SH", "accessibilityLabel"]
+- !private ["SH", "addTarget"]
+- !private ["SH", "changeBtn"]
+- !private ["SH", "changeFuncLabel"]
+- !private ["SH", "clickButton"]
+- !private ["SH", "content"]
+- !private ["SH", "contextView"]
+- !private ["SH", "funcTitle"]
+- !private ["SH", "init"]
+- !private ["SH", "nextLabel"]
+- !private ["SH", "nowFuncLabel"]
+- !private ["SH", "nowLabel"]
+- !private ["SH", "status"]
+- !private ["SH", "subscript"]
+- !private ["SH", "text"]
+- !private ["SH", "title"]
+- !private ["SH", "viewDidLoad"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "accessibilityElementsHidden"]
+- !private ["So8NSCodingP", "accessibilityLabel"]
+- !private ["So8NSCodingP", "addTarget"]
+- !private ["So8NSCodingP", "changeBtn"]
+- !private ["So8NSCodingP", "changeFuncLabel"]
+- !private ["So8NSCodingP", "clickButton"]
+- !private ["So8NSCodingP", "content"]
+- !private ["So8NSCodingP", "contextView"]
+- !private ["So8NSCodingP", "funcTitle"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "nextLabel"]
+- !private ["So8NSCodingP", "nowFuncLabel"]
+- !private ["So8NSCodingP", "nowLabel"]
+- !private ["So8NSCodingP", "status"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "changeBtn"]
+- !private ["So26NSExtensionRequestHandlingP", "changeFuncLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "clickButton"]
+- !private ["So26NSExtensionRequestHandlingP", "content"]
+- !private ["So26NSExtensionRequestHandlingP", "contextView"]
+- !private ["So26NSExtensionRequestHandlingP", "funcTitle"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "nextLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "nowFuncLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "nowLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "status"]
+- !private ["So26NSExtensionRequestHandlingP", "title"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UITextView"]
+- !private ["So8NSObjectC", "accessibilityElementsHidden"]
+- !private ["So8NSObjectC", "accessibilityLabel"]
+- !private ["So8NSObjectC", "addTarget"]
+- ["So8NSObjectC", "changeBtn"]
+- ["So8NSObjectC", "changeFuncLabel"]
+- ["So8NSObjectC", "clickButton"]
+- ["So8NSObjectC", "content"]
+- ["So8NSObjectC", "contextView"]
+- ["So8NSObjectC", "funcTitle"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "nextLabel"]
+- ["So8NSObjectC", "nowFuncLabel"]
+- ["So8NSObjectC", "nowLabel"]
+- ["So8NSObjectC", "status"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "title"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accessibilityElementsHidden"]
+- !private ["So8NSObjectP", "accessibilityLabel"]
+- !private ["So8NSObjectP", "addTarget"]
+- !private ["So8NSObjectP", "changeBtn"]
+- !private ["So8NSObjectP", "changeFuncLabel"]
+- !private ["So8NSObjectP", "clickButton"]
+- !private ["So8NSObjectP", "content"]
+- !private ["So8NSObjectP", "contextView"]
+- !private ["So8NSObjectP", "funcTitle"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "nextLabel"]
+- !private ["So8NSObjectP", "nowFuncLabel"]
+- !private ["So8NSObjectP", "nowLabel"]
+- !private ["So8NSObjectP", "status"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["s9OptionSetP", "touchUpInside"]
+- !private ["Sq", "accessibilityElementsHidden"]
+- !private ["Sq", "accessibilityLabel"]
+- !private ["Sq", "addTarget"]
+- !private ["Sq", "text"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "touchUpInside"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "touchUpInside"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "accessibilityLabel"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityElementsHidden"]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "addTarget"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "accessibilityElementsHidden"]
+- !private ["So12UIAppearanceP", "accessibilityLabel"]
+- !private ["So12UIAppearanceP", "addTarget"]
+- !private ["So12UIAppearanceP", "text"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "accessibilityElementsHidden"]
+- !private ["So21UIAppearanceContainerP", "accessibilityLabel"]
+- !private ["So21UIAppearanceContainerP", "addTarget"]
+- !private ["So21UIAppearanceContainerP", "changeBtn"]
+- !private ["So21UIAppearanceContainerP", "changeFuncLabel"]
+- !private ["So21UIAppearanceContainerP", "clickButton"]
+- !private ["So21UIAppearanceContainerP", "content"]
+- !private ["So21UIAppearanceContainerP", "contextView"]
+- !private ["So21UIAppearanceContainerP", "funcTitle"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "nextLabel"]
+- !private ["So21UIAppearanceContainerP", "nowFuncLabel"]
+- !private ["So21UIAppearanceContainerP", "nowLabel"]
+- !private ["So21UIAppearanceContainerP", "status"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "title"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So8UIButtonC", "accessibilityLabel"]
+- !private ["So8UIButtonC", "addTarget"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "changeBtn"]
+- !private ["So18UIContentContainerP", "changeFuncLabel"]
+- !private ["So18UIContentContainerP", "clickButton"]
+- !private ["So18UIContentContainerP", "content"]
+- !private ["So18UIContentContainerP", "contextView"]
+- !private ["So18UIContentContainerP", "funcTitle"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "nextLabel"]
+- !private ["So18UIContentContainerP", "nowFuncLabel"]
+- !private ["So18UIContentContainerP", "nowLabel"]
+- !private ["So18UIContentContainerP", "status"]
+- !private ["So18UIContentContainerP", "title"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "accessibilityElementsHidden"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "accessibilityLabel"]
+- !private ["So9UIControlC", "addTarget"]
+- !private ["So17UICoordinateSpaceP", "accessibilityElementsHidden"]
+- !private ["So17UICoordinateSpaceP", "accessibilityLabel"]
+- !private ["So17UICoordinateSpaceP", "addTarget"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "accessibilityElementsHidden"]
+- !private ["So13UIDynamicItemP", "accessibilityLabel"]
+- !private ["So13UIDynamicItemP", "addTarget"]
+- !private ["So13UIDynamicItemP", "text"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "accessibilityElementsHidden"]
+- !private ["So18UIFocusEnvironmentP", "accessibilityLabel"]
+- !private ["So18UIFocusEnvironmentP", "addTarget"]
+- !private ["So18UIFocusEnvironmentP", "changeBtn"]
+- !private ["So18UIFocusEnvironmentP", "changeFuncLabel"]
+- !private ["So18UIFocusEnvironmentP", "clickButton"]
+- !private ["So18UIFocusEnvironmentP", "content"]
+- !private ["So18UIFocusEnvironmentP", "contextView"]
+- !private ["So18UIFocusEnvironmentP", "funcTitle"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "nextLabel"]
+- !private ["So18UIFocusEnvironmentP", "nowFuncLabel"]
+- !private ["So18UIFocusEnvironmentP", "nowLabel"]
+- !private ["So18UIFocusEnvironmentP", "status"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "title"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "accessibilityElementsHidden"]
+- !private ["So11UIFocusItemP", "accessibilityLabel"]
+- !private ["So11UIFocusItemP", "addTarget"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "accessibilityElementsHidden"]
+- !private ["So20UIFocusItemContainerP", "accessibilityLabel"]
+- !private ["So20UIFocusItemContainerP", "addTarget"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So30UIFocusItemScrollableContainerP", "text"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So7UILabelC", "accessibilityElementsHidden"]
+- !private ["So7UILabelC", "text"]
+- !private ["So24UILargeContentViewerItemP", "accessibilityElementsHidden"]
+- !private ["So24UILargeContentViewerItemP", "accessibilityLabel"]
+- !private ["So24UILargeContentViewerItemP", "addTarget"]
+- !private ["So24UILargeContentViewerItemP", "text"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityElementsHidden"]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "addTarget"]
+- !private ["So30UIPasteConfigurationSupportingP", "changeBtn"]
+- !private ["So30UIPasteConfigurationSupportingP", "changeFuncLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "clickButton"]
+- !private ["So30UIPasteConfigurationSupportingP", "content"]
+- !private ["So30UIPasteConfigurationSupportingP", "contextView"]
+- !private ["So30UIPasteConfigurationSupportingP", "funcTitle"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "nextLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "nowFuncLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "nowLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "status"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "title"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UITextView"]
+- !private ["So11UIResponderC", "accessibilityElementsHidden"]
+- !private ["So11UIResponderC", "accessibilityLabel"]
+- !private ["So11UIResponderC", "addTarget"]
+- ["So11UIResponderC", "changeBtn"]
+- ["So11UIResponderC", "changeFuncLabel"]
+- ["So11UIResponderC", "clickButton"]
+- ["So11UIResponderC", "content"]
+- ["So11UIResponderC", "contextView"]
+- ["So11UIResponderC", "funcTitle"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "nextLabel"]
+- ["So11UIResponderC", "nowFuncLabel"]
+- ["So11UIResponderC", "nowLabel"]
+- ["So11UIResponderC", "status"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So11UIResponderC", "title"]
+- ["So11UIResponderC", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityElementsHidden"]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "addTarget"]
+- !private ["So30UIResponderStandardEditActionsP", "changeBtn"]
+- !private ["So30UIResponderStandardEditActionsP", "changeFuncLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "clickButton"]
+- !private ["So30UIResponderStandardEditActionsP", "content"]
+- !private ["So30UIResponderStandardEditActionsP", "contextView"]
+- !private ["So30UIResponderStandardEditActionsP", "funcTitle"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "nextLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "nowFuncLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "nowLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "status"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "title"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So12UIScrollViewC", "text"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "accessibilityLabel"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "changeBtn"]
+- !private ["So16UIStateRestoringP", "changeFuncLabel"]
+- !private ["So16UIStateRestoringP", "clickButton"]
+- !private ["So16UIStateRestoringP", "content"]
+- !private ["So16UIStateRestoringP", "contextView"]
+- !private ["So16UIStateRestoringP", "funcTitle"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "nextLabel"]
+- !private ["So16UIStateRestoringP", "nowFuncLabel"]
+- !private ["So16UIStateRestoringP", "nowLabel"]
+- !private ["So16UIStateRestoringP", "status"]
+- !private ["So16UIStateRestoringP", "title"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So10UITextViewC", "text"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "accessibilityElementsHidden"]
+- !private ["So18UITraitEnvironmentP", "accessibilityLabel"]
+- !private ["So18UITraitEnvironmentP", "addTarget"]
+- !private ["So18UITraitEnvironmentP", "changeBtn"]
+- !private ["So18UITraitEnvironmentP", "changeFuncLabel"]
+- !private ["So18UITraitEnvironmentP", "clickButton"]
+- !private ["So18UITraitEnvironmentP", "content"]
+- !private ["So18UITraitEnvironmentP", "contextView"]
+- !private ["So18UITraitEnvironmentP", "funcTitle"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "nextLabel"]
+- !private ["So18UITraitEnvironmentP", "nowFuncLabel"]
+- !private ["So18UITraitEnvironmentP", "nowLabel"]
+- !private ["So18UITraitEnvironmentP", "status"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "title"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "accessibilityElementsHidden"]
+- !private ["So23UIUserActivityRestoringP", "accessibilityLabel"]
+- !private ["So23UIUserActivityRestoringP", "addTarget"]
+- !private ["So23UIUserActivityRestoringP", "changeBtn"]
+- !private ["So23UIUserActivityRestoringP", "changeFuncLabel"]
+- !private ["So23UIUserActivityRestoringP", "clickButton"]
+- !private ["So23UIUserActivityRestoringP", "content"]
+- !private ["So23UIUserActivityRestoringP", "contextView"]
+- !private ["So23UIUserActivityRestoringP", "funcTitle"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "nextLabel"]
+- !private ["So23UIUserActivityRestoringP", "nowFuncLabel"]
+- !private ["So23UIUserActivityRestoringP", "nowLabel"]
+- !private ["So23UIUserActivityRestoringP", "status"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "title"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "accessibilityElementsHidden"]
+- !private ["So6UIViewC", "accessibilityLabel"]
+- !private ["So6UIViewC", "addTarget"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "UIButton"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UITextView"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "changeBtn"]
+- ["So16UIViewControllerC", "changeFuncLabel"]
+- ["So16UIViewControllerC", "clickButton"]
+- ["So16UIViewControllerC", "content"]
+- ["So16UIViewControllerC", "contextView"]
+- ["So16UIViewControllerC", "funcTitle"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "nextLabel"]
+- ["So16UIViewControllerC", "nowFuncLabel"]
+- ["So16UIViewControllerC", "nowLabel"]
+- ["So16UIViewControllerC", "status"]
+- !private ["So16UIViewControllerC", "title"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityElementsHidden"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addTarget"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "changeBtn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "changeFuncLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clickButton"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "content"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contextView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "funcTitle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nextLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nowFuncLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nowLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "status"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "accessibilityElementsHidden"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "accessibilityLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addTarget"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "changeBtn"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "changeFuncLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clickButton"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "content"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contextView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "funcTitle"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "nextLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "nowFuncLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "nowLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "status"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "title"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "accessibilityElementsHidden"]
+- !private ["s21_ObjectiveCBridgeableP", "accessibilityLabel"]
+- !private ["s21_ObjectiveCBridgeableP", "addTarget"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "accessibilityElementsHidden"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "accessibilityLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addTarget"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+depends-nominal:
+- "0013FFqHAGaHmvcHr19AboutViewControllerC"
+- !private "Sa"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "So15UIControlEventsV"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "s9OptionSetP"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- !private "So8UIButtonC"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
+- !private "So10UIKeyInputP"
+- !private "So7UILabelC"
+- !private "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- !private "So10UITextViewC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/ObjectiveC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreMIDI.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreImage.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/QuartzCore.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Dispatch.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/UIKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Headers/FirebaseInstanceID-umbrella.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthCredential.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFederatedAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGameCenterAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageListResult.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseInstanceID/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/iuilab/Documents/Xcode/BusPlusA/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "548c2551c032cc99571b63ea8270a3b6"

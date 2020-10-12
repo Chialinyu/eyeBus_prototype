@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/GDTCORLifecycle.m \
+  /Users/iuilab/Documents/Xcode/BusPlusA/build/Pods.build/Debug-iphonesimulator/GoogleDataTransport.build/module.modulemap \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORLifecycle.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORPlatform.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCOREvent.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCOREventDataObject.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORRegistrar_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORRegistrar.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORPrioritizer.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORUploadPackage.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORTargets.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORUploader.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Public/GDTCORClock.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORStorage_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORStorage.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer_Private.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadCoordinator.h \
+  /Users/iuilab/Documents/Xcode/BusPlusA/Pods/GoogleDataTransport/GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadPackage_Private.h

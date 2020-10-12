@@ -1,0 +1,6 @@
+framework module Pods_BusPlusA_BusPlusAUITests {
+  umbrella header "Pods-BusPlusA-BusPlusAUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

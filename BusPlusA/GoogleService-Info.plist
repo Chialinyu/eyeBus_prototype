@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>346415213295-h3pgnk3jplrmqetpckhd9ut1jo5nnbur.apps.googleusercontent.com</string>
+	<string></string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.346415213295-h3pgnk3jplrmqetpckhd9ut1jo5nnbur</string>
+	<string></string>
 	<key>API_KEY</key>
-	<string>AIzaSyDaSWRhSCQ_ujwJWVpeVOCk88ZVcftpQyI</string>
+	<string></string>
 	<key>GCM_SENDER_ID</key>
-	<string>346415213295</string>
+	<string></string>
 	<key>PLIST_VERSION</key>
-	<string>1</string>
+	<string></string>
 	<key>BUNDLE_ID</key>
-	<string>com.carolynyu.BusPlusA</string>
+	<string></string>
 	<key>PROJECT_ID</key>
-	<string>bustestapp-c3c59</string>
+	<string></string>
 	<key>STORAGE_BUCKET</key>
-	<string>bustestapp-c3c59.appspot.com</string>
+	<string></string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<false/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:346415213295:ios:d08f6e613abb894757491a</string>
+	<string></string>
 	<key>DATABASE_URL</key>
-	<string>https://bustestapp-c3c59.firebaseio.com</string>
+	<string></string>
 </dict>
 </plist>
